@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { QuoteInputs } from '../utils/calculator';
 import { pincodes, occupancies } from '../data/dataManager';
-import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle } from 'lucide-react';
+import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus } from 'lucide-react';
 
 interface CalculatorFormProps {
   onUpdate: (inputs: QuoteInputs) => void;
@@ -13,6 +13,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
     pmSI: 0,
     furnitureSI: 0,
     stocksSI: 0,
+    otherSI: 0,
     discount: 0,
     includeTerrorism: true,
     occupancy: null,
@@ -110,12 +111,13 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
         <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
           <ShieldAlert className="w-4 h-4" /> 2. Asset Values (Sum Insured)
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {[
             { label: 'Building', key: 'buildingSI', icon: Building2 },
             { label: 'Plant & Mach.', key: 'pmSI', icon: Factory },
             { label: 'Furniture/Fixt.', key: 'furnitureSI', icon: Sofa },
             { label: 'Stocks', key: 'stocksSI', icon: Package },
+            { label: 'Other Assets', key: 'otherSI', icon: Plus },
           ].map((item) => (
             <div key={item.key} className="space-y-1.5">
               <label className="text-xs font-bold text-slate-600 flex items-center gap-1.5 uppercase tracking-tighter">

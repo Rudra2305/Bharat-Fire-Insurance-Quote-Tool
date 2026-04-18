@@ -4,8 +4,9 @@ import type { Occupancy, PincodeData } from '../data/dataManager';
 export interface QuoteInputs {
   buildingSI: number;
   pmSI: number;
-  furnitureSI: number; // New field
+  furnitureSI: number;
   stocksSI: number;
+  otherSI: number; // New field for other assets
   discount: number;
   includeTerrorism: boolean;
   occupancy: Occupancy | null;
@@ -46,7 +47,7 @@ export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
 
   if (!occupancy || !pincode) return null;
 
-  const totalSI = buildingSI + pmSI + furnitureSI + stocksSI;
+  const totalSI = buildingSI + pmSI + furnitureSI + stocksSI + otherSI;
   if (totalSI <= 0) return null;
 
   // Underwriting Gatekeeper: 70% Claim Ratio Rule

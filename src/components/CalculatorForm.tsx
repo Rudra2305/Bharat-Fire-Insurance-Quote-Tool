@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import type { QuoteInputs } from '../utils/calculator';
-import { pincodes, occupancies } from '../data/dataManager';
+import { pincodeMap, occupancies } from '../data/dataManager';
 import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus } from 'lucide-react';
 
 interface CalculatorFormProps {
@@ -34,7 +34,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
   const handlePincodeChange = (val: string) => {
     setPincodeQuery(val);
     if (val.length === 6) {
-      const found = pincodes.find(p => p.pincode === val);
+      const found = pincodeMap[val];
       if (found) {
         setInputs(prev => ({ ...prev, pincode: found }));
       }

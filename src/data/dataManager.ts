@@ -15,16 +15,20 @@ export interface Occupancy {
   flexaRate: number;
 }
 
-// Map Pincodes
-export const pincodes: PincodeData[] = (pincodesRaw as any[]).map((p: any) => ({
-  pincode: String(p["Pincode"]),
-  state: p["State"],
-  district: p["District"],
-  eqZone: p["Earthquake zone"]
-}));
+// Map Pincodes to a Record for O(1) lookup
+export const pincodeMap: Record<string, PincodeData> = {};
+(pincodesRaw as any[]).forEach((p: any) => {
+  const code = String(p["Pincode"]);
+  pincodeMap[code] = {
+    pincode: code,
+    state: p["State"],
+    district: p["District"],
+    eqZone: p["Earthquake zone"]
+  };
+});
 
 // Map Occupancies
-export const occupancies: Occupancy[] = occupanciesRaw.map((o: any) => ({
+export const occupancies: Occupancy[] = (occupanciesRaw as any[]).map((o: any) => ({
   name: o["Occupancy Description"],
   categoryCode: o["Code"],
   flexaRate: o["Flexa Rate"]

@@ -43,9 +43,11 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
     }
   };
 
-  const filteredOccupancies = occupancies.filter(occ => 
-    occ.name.toLowerCase().includes(occupancyQuery.toLowerCase())
-  ).slice(0, 10);
+  const filteredOccupancies = occupancyQuery.length > 1 
+    ? occupancies.filter(occ => 
+        occ.name.toLowerCase().includes(occupancyQuery.toLowerCase())
+      ).slice(0, 10)
+    : [];
 
   return (
     <div className="space-y-8 pb-10">

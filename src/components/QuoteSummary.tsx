@@ -20,7 +20,11 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
   }
 
   const formatCurrency = (val: number) => 
-    new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
+    new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR', 
+      maximumFractionDigits: 0 
+    }).format(val || 0);
 
   // ADVISORY CARD FOR HIGH CLAIM RATIO (>70%)
   if (result.isBlocked) {
@@ -35,11 +39,11 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
           <div className="p-8 space-y-6">
             <div className="flex items-center justify-between p-4 bg-red-50 rounded-2xl border border-red-100">
               <span className="text-sm font-bold text-red-900">Calculated Claim Ratio</span>
-              <span className="text-2xl font-black text-red-600">{result.claimRatio.toFixed(2)}%</span>
+              <span className="text-2xl font-black text-red-600">{(result.claimRatio || 0).toFixed(2)}%</span>
             </div>
 
             <p className="text-slate-600 text-sm leading-relaxed font-medium">
-              Your 3-year Incurred Claim Ratio is <strong className="text-red-600">{result.claimRatio.toFixed(2)}%</strong>. 
+              Your 3-year Incurred Claim Ratio is <strong className="text-red-600">{(result.claimRatio || 0).toFixed(2)}%</strong>. 
               Based on Indian market standards (IIB guidelines), this exceeds the <strong className="text-slate-900">70% threshold</strong> for automated quoting.
             </p>
 
@@ -156,7 +160,7 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex gap-4 shadow-sm">
         <TrendingDown className="w-5 h-5 text-blue-600 shrink-0 mt-1" />
         <p className="text-slate-600 text-xs font-semibold leading-relaxed">
-          Your Claim Ratio is <span className="text-blue-600">{result.claimRatio.toFixed(1)}%</span>. Since this is well within the 70% threshold, you are eligible for the standard market rates displayed above.
+          Your Claim Ratio is <span className="text-blue-600">{(result.claimRatio || 0).toFixed(1)}%</span>. Since this is well within the 70% threshold, you are eligible for the standard market rates displayed above.
         </p>
       </div>
     </div>

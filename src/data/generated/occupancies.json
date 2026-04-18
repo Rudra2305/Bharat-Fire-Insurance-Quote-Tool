@@ -1,0 +1,2038 @@
+[
+  {
+    "S NO": 1,
+    "Occupancy Description": "Dwellings",
+    "Occupancy Code": "1001*",
+    "Flexa Rate": 0.14,
+    "Code": "A"
+  },
+  {
+    "S NO": 2,
+    "Occupancy Description": "Dwellings: Cooperative Society",
+    "Occupancy Code": "1001_2",
+    "Flexa Rate": 0.24,
+    "Code": "A"
+  },
+  {
+    "S NO": 3,
+    "Occupancy Description": "Places of worships",
+    "Occupancy Code": 1002,
+    "Flexa Rate": 0.12,
+    "Code": "A"
+  },
+  {
+    "S NO": 4,
+    "Occupancy Description": "Libraries",
+    "Occupancy Code": 1003,
+    "Flexa Rate": 0.21,
+    "Code": "A"
+  },
+  {
+    "S NO": 5,
+    "Occupancy Description": "Museums",
+    "Occupancy Code": 1004,
+    "Flexa Rate": 0.23,
+    "Code": "A"
+  },
+  {
+    "S NO": 6,
+    "Occupancy Description": "Schools / Colleges",
+    "Occupancy Code": 1005,
+    "Flexa Rate": 0.2,
+    "Code": "A"
+  },
+  {
+    "S NO": 7,
+    "Occupancy Description": "Hospitals including X-ray and other Diagnostic clinics",
+    "Occupancy Code": "1006*",
+    "Flexa Rate": 0.23,
+    "Code": "B"
+  },
+  {
+    "S NO": 8,
+    "Occupancy Description": "Office premises / Meeting Rooms",
+    "Occupancy Code": 1007,
+    "Flexa Rate": 0.25,
+    "Code": "B"
+  },
+  {
+    "S NO": 9,
+    "Occupancy Description": "Auditoriums / Planetarium",
+    "Occupancy Code": "1008*",
+    "Flexa Rate": 0.28,
+    "Code": "B"
+  },
+  {
+    "S NO": 10,
+    "Occupancy Description": "Mess Houses / Clubs",
+    "Occupancy Code": 1009,
+    "Flexa Rate": 0.21,
+    "Code": "B"
+  },
+  {
+    "S NO": 11,
+    "Occupancy Description": "Marriage Halls",
+    "Flexa Rate": 0.18,
+    "Code": "B"
+  },
+  {
+    "S NO": 12,
+    "Occupancy Description": "Showrooms and display centres where goods are kept for display and no sales are carried out",
+    "Occupancy Code": 1011,
+    "Flexa Rate": 0.28,
+    "Code": "B"
+  },
+  {
+    "S NO": 13,
+    "Occupancy Description": "Educational and Research Institutes imparting training invarious crafts",
+    "Occupancy Code": 1012,
+    "Flexa Rate": 0.24,
+    "Code": "B"
+  },
+  {
+    "S NO": 14,
+    "Occupancy Description": "Lodging/Boarding Houses",
+    "Occupancy Code": 1013,
+    "Flexa Rate": 0.19,
+    "Code": "B"
+  },
+  {
+    "S NO": 15,
+    "Occupancy Description": "Cycle Shed",
+    "Occupancy Code": 1014,
+    "Flexa Rate": 0.22,
+    "Code": "B"
+  },
+  {
+    "S NO": 16,
+    "Occupancy Description": "Dish Antenna",
+    "Occupancy Code": 1015,
+    "Flexa Rate": 0.23,
+    "Code": "B"
+  },
+  {
+    "S NO": 17,
+    "Occupancy Description": "Indoor stadiums, Health Club, Gymnasium and Swimming Pool",
+    "Occupancy Code": 1016,
+    "Flexa Rate": 0.08,
+    "Code": "B"
+  },
+  {
+    "S NO": 18,
+    "Occupancy Description": "Cafes, Restaurants, Hotels, Confectioner and Sweet meat sellers, Health Resorts",
+    "Occupancy Code": 1017,
+    "Flexa Rate": 0.25,
+    "Code": "B"
+  },
+  {
+    "S NO": 19,
+    "Occupancy Description": "Laundries / Dry Cleaning",
+    "Occupancy Code": 1018,
+    "Flexa Rate": 0.51,
+    "Code": "B"
+  },
+  {
+    "S NO": 20,
+    "Occupancy Description": "Battery Charging Service Stations",
+    "Occupancy Code": 1019,
+    "Flexa Rate": 0.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 21,
+    "Occupancy Description": "Amusement parks",
+    "Occupancy Code": 1020,
+    "Flexa Rate": 0.78,
+    "Code": "B"
+  },
+  {
+    "S NO": 22,
+    "Occupancy Description": "Hoarding, Neon signs",
+    "Occupancy Code": 1021,
+    "Flexa Rate": 0.99,
+    "Code": "B"
+  },
+  {
+    "S NO": 23,
+    "Occupancy Description": "Sports Galleries, Outdoor stadiums",
+    "Occupancy Code": 1022,
+    "Flexa Rate": 1.43,
+    "Code": "B"
+  },
+  {
+    "S NO": 24,
+    "Occupancy Description": "Shops dealing in goods otherwise not provided for",
+    "Occupancy Code": "1023*",
+    "Flexa Rate": 0.66,
+    "Code": "B"
+  },
+  {
+    "S NO": 25,
+    "Occupancy Description": "Shops dealing in hazardous goods",
+    "Occupancy Code": "1024*",
+    "Flexa Rate": 0.84,
+    "Code": "B"
+  },
+  {
+    "S NO": 26,
+    "Occupancy Description": "Arms and Ammunition dealers",
+    "Occupancy Code": 1025,
+    "Flexa Rate": 0.98,
+    "Code": "C"
+  },
+  {
+    "S NO": 27,
+    "Occupancy Description": "Motor Vehicle showroom including sales and service",
+    "Occupancy Code": 1026,
+    "Flexa Rate": 0.47,
+    "Code": "B"
+  },
+  {
+    "S NO": 28,
+    "Occupancy Description": "Fuel Station-Petrol / Diesel Kiosks (without CNG)",
+    "Occupancy Code": 1027,
+    "Flexa Rate": 0.53,
+    "Code": "C"
+  },
+  {
+    "S NO": 29,
+    "Occupancy Description": "Fuel Station-Petrol / Diesel Kiosks (with CNG)",
+    "Occupancy Code": 1028,
+    "Flexa Rate": 1.11,
+    "Code": "C"
+  },
+  {
+    "S NO": 30,
+    "Occupancy Description": "Data Processing/Call Centres/Business Process Outsourcing centres",
+    "Occupancy Code": 1029,
+    "Flexa Rate": 0.14,
+    "Code": "B"
+  },
+  {
+    "S NO": 31,
+    "Occupancy Description": "Abrasive Manufacturing",
+    "Occupancy Code": 2001,
+    "Flexa Rate": 0.69,
+    "Code": "C"
+  },
+  {
+    "S NO": 32,
+    "Occupancy Description": "Aerated Water Factories",
+    "Occupancy Code": "2002*",
+    "Flexa Rate": 0.62,
+    "Code": "C"
+  },
+  {
+    "S NO": 33,
+    "Occupancy Description": "Aerial Ropeway including trolley stations",
+    "Occupancy Code": 2003,
+    "Flexa Rate": 0.8,
+    "Code": "C"
+  },
+  {
+    "S NO": 34,
+    "Occupancy Description": "Agarbatti Manufacturing",
+    "Occupancy Code": "2004*",
+    "Flexa Rate": 1.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 35,
+    "Occupancy Description": "Aircraft Hangers",
+    "Occupancy Code": 2005,
+    "Flexa Rate": 1.14,
+    "Code": "C"
+  },
+  {
+    "S NO": 36,
+    "Occupancy Description": "Airport Terminal Buildings (including all facilities like Cafes, Shops etc)",
+    "Occupancy Code": 2006,
+    "Flexa Rate": 0.29,
+    "Code": "C"
+  },
+  {
+    "S NO": 37,
+    "Occupancy Description": "Aluminium/ Magnesium Powder Plants",
+    "Occupancy Code": 2007,
+    "Flexa Rate": 0.88,
+    "Code": "C"
+  },
+  {
+    "S NO": 38,
+    "Occupancy Description": "Aluminium, Zinc, Copper Factories",
+    "Occupancy Code": "2008*",
+    "Flexa Rate": 0.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 39,
+    "Occupancy Description": "Areca nut and / or Betel nut factories",
+    "Occupancy Code": 2009,
+    "Flexa Rate": 1.07,
+    "Code": "C"
+  },
+  {
+    "S NO": 40,
+    "Occupancy Description": "Asbestos Steam Packing and lagging manufacturing",
+    "Occupancy Code": 2010,
+    "Flexa Rate": 0.61,
+    "Code": "C"
+  },
+  {
+    "S NO": 41,
+    "Occupancy Description": "Atta and Cereal Grinding (excluding Dal Mills)",
+    "Occupancy Code": "2011*",
+    "Flexa Rate": 0.73,
+    "Code": "C"
+  },
+  {
+    "S NO": 42,
+    "Occupancy Description": "Audio/Video Cassette Manufacturing",
+    "Occupancy Code": 2012,
+    "Flexa Rate": 2.08,
+    "Code": "C"
+  },
+  {
+    "S NO": 43,
+    "Occupancy Description": "Automobile Manufacturing",
+    "Occupancy Code": "2013*",
+    "Flexa Rate": 0.53,
+    "Code": "C"
+  },
+  {
+    "S NO": 44,
+    "Occupancy Description": "Bakeries",
+    "Occupancy Code": "2014*",
+    "Flexa Rate": 0.7,
+    "Code": "B"
+  },
+  {
+    "S NO": 45,
+    "Occupancy Description": "Basket Weavers and Cane Furniture Makers",
+    "Occupancy Code": 2015,
+    "Flexa Rate": 2.66,
+    "Code": "C"
+  },
+  {
+    "S NO": 46,
+    "Occupancy Description": "Battery Manufacturing",
+    "Occupancy Code": 2016,
+    "Flexa Rate": 0.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 47,
+    "Occupancy Description": "Beedi Factories",
+    "Occupancy Code": 2017,
+    "Flexa Rate": 1.32,
+    "Code": "C"
+  },
+  {
+    "S NO": 48,
+    "Occupancy Description": "Biscuit Factories",
+    "Occupancy Code": "2018*",
+    "Flexa Rate": 0.68,
+    "Code": "C"
+  },
+  {
+    "S NO": 49,
+    "Occupancy Description": "Bituminised Paper and / or Hessian Cloth Manufacturing including Tar Felt Manufacturing.",
+    "Occupancy Code": 2019,
+    "Flexa Rate": 1.37,
+    "Code": "C"
+  },
+  {
+    "S NO": 50,
+    "Occupancy Description": "Book Binders, Envelope and Paper Bag Manufacturing",
+    "Occupancy Code": "2020*",
+    "Flexa Rate": 1.13,
+    "Code": "C"
+  },
+  {
+    "S NO": 51,
+    "Occupancy Description": "Breweries",
+    "Occupancy Code": "2021*",
+    "Flexa Rate": 0.97,
+    "Code": "C"
+  },
+  {
+    "S NO": 52,
+    "Occupancy Description": "Brickworks (including refractories and fire bricks)",
+    "Occupancy Code": "2022*",
+    "Flexa Rate": 0.41,
+    "Code": "C"
+  },
+  {
+    "S NO": 53,
+    "Occupancy Description": "Bridges- Concrete/Steel",
+    "Occupancy Code": 2023,
+    "Flexa Rate": 0.18,
+    "Code": "F"
+  },
+  {
+    "S NO": 54,
+    "Occupancy Description": "Bridges-Wooden",
+    "Occupancy Code": 2024,
+    "Flexa Rate": 1.02,
+    "Code": "F"
+  },
+  {
+    "S NO": 55,
+    "Occupancy Description": "Building In course of construction",
+    "Occupancy Code": 2025,
+    "Flexa Rate": 0.18,
+    "Code": "C"
+  },
+  {
+    "S NO": 56,
+    "Occupancy Description": "Cable Manufacturing",
+    "Occupancy Code": "2026*",
+    "Flexa Rate": 1.03,
+    "Code": "C"
+  },
+  {
+    "S NO": 57,
+    "Occupancy Description": "Camphor Manufacturing",
+    "Occupancy Code": 2027,
+    "Flexa Rate": 1.56,
+    "Code": "C"
+  },
+  {
+    "S NO": 58,
+    "Occupancy Description": "Candle Works",
+    "Occupancy Code": 2028,
+    "Flexa Rate": 1.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 59,
+    "Occupancy Description": "Canning Factories",
+    "Occupancy Code": "2029*",
+    "Flexa Rate": 0.86,
+    "Code": "C"
+  },
+  {
+    "S NO": 60,
+    "Occupancy Description": "Capsule Manufacturing",
+    "Occupancy Code": 2030,
+    "Flexa Rate": 0.66,
+    "Code": "C"
+  },
+  {
+    "S NO": 61,
+    "Occupancy Description": "Carbon paper / Typewriter Ribbon Manufacturing",
+    "Occupancy Code": 2031,
+    "Flexa Rate": 1.37,
+    "Code": "C"
+  },
+  {
+    "S NO": 62,
+    "Occupancy Description": "Cardamon Factories",
+    "Occupancy Code": "2032*",
+    "Flexa Rate": 1.02,
+    "Code": "C"
+  },
+  {
+    "S NO": 63,
+    "Occupancy Description": "Cardboard Box Manufacturing",
+    "Occupancy Code": "2033*",
+    "Flexa Rate": 1.42,
+    "Code": "C"
+  },
+  {
+    "S NO": 64,
+    "Occupancy Description": "Carpenters, Wood wool Manufacturing, Furniture  Manufacturing and other wood worker shops (excluding saw mill)",
+    "Occupancy Code": 2034,
+    "Flexa Rate": 1.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 65,
+    "Occupancy Description": "Carpet and Drugget Manufacturing (Cotton/Jute/Wool)",
+    "Occupancy Code": 2035,
+    "Flexa Rate": 1.78,
+    "Code": "C"
+  },
+  {
+    "S NO": 66,
+    "Occupancy Description": "Carpet and Drugget Manufacturing (Others)",
+    "Occupancy Code": 2036,
+    "Flexa Rate": 1.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 67,
+    "Occupancy Description": "Cashew nut Factories",
+    "Occupancy Code": 2037,
+    "Flexa Rate": 0.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 68,
+    "Occupancy Description": "Cattle feed Mill",
+    "Occupancy Code": 2038,
+    "Flexa Rate": 0.61,
+    "Code": "C"
+  },
+  {
+    "S NO": 69,
+    "Occupancy Description": "Celluloid Goods Manufacturing",
+    "Occupancy Code": 2039,
+    "Flexa Rate": 9.47,
+    "Code": "C"
+  },
+  {
+    "S NO": 70,
+    "Occupancy Description": "Cement / asbestos/concrete products Manufacturing",
+    "Occupancy Code": "2040*",
+    "Flexa Rate": 0.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 71,
+    "Occupancy Description": "Cement Factories",
+    "Occupancy Code": "2041*",
+    "Flexa Rate": 0.68,
+    "Code": "C"
+  },
+  {
+    "S NO": 72,
+    "Occupancy Description": "Ceramic Factories and Crockery and Stoneware pipe  Manufacturing/ Clay Works.",
+    "Occupancy Code": "2042*",
+    "Flexa Rate": 0.78,
+    "Code": "C"
+  },
+  {
+    "S NO": 73,
+    "Occupancy Description": "Chemical Manufacturing (Using materials with Flash Point below 32°C), Bulk Drug,Manufacturing",
+    "Occupancy Code": "2043*",
+    "Flexa Rate": 1.39,
+    "Code": "C"
+  },
+  {
+    "S NO": 74,
+    "Occupancy Description": "Chemical Manufacturing(others), Pharmaceuticals, Toiletry products",
+    "Occupancy Code": "2044*",
+    "Flexa Rate": 1.01,
+    "Code": "C"
+  },
+  {
+    "S NO": 75,
+    "Occupancy Description": "Cigar and Cigarette Manufacturing",
+    "Occupancy Code": 2045,
+    "Flexa Rate": 0.85,
+    "Code": "C"
+  },
+  {
+    "S NO": 76,
+    "Occupancy Description": "Cigarette Filter Manufacturing (Using Solvents with Flash Point below 32° C)",
+    "Occupancy Code": 2046,
+    "Flexa Rate": 2.54,
+    "Code": "C"
+  },
+  {
+    "S NO": 77,
+    "Occupancy Description": "Cigarette Filter Manufacturing (Others)",
+    "Occupancy Code": 2047,
+    "Flexa Rate": 1.49,
+    "Code": "C"
+  },
+  {
+    "S NO": 78,
+    "Occupancy Description": "Cinema Film Production Studios",
+    "Occupancy Code": 2048,
+    "Flexa Rate": 2.64,
+    "Code": "C"
+  },
+  {
+    "S NO": 79,
+    "Occupancy Description": "Cinematography Film Editing, Laboratory and Sound recording rooms where Film processing is carried out",
+    "Occupancy Code": 2049,
+    "Flexa Rate": 0.73,
+    "Code": "C"
+  },
+  {
+    "S NO": 80,
+    "Occupancy Description": "Cinematography Film Editing, Laboratory and Sound recording rooms without Film processing.",
+    "Occupancy Code": 2050,
+    "Flexa Rate": 0.62,
+    "Code": "C"
+  },
+  {
+    "S NO": 81,
+    "Occupancy Description": "Cinema Theatres (For single screen)",
+    "Occupancy Code": 2051,
+    "Flexa Rate": 0.4,
+    "Code": "B"
+  },
+  {
+    "S NO": 82,
+    "Occupancy Description": "Circus, Touring Drama Troupes and Touring Cinema Theatres",
+    "Occupancy Code": 2052,
+    "Flexa Rate": 6.35,
+    "Code": "C"
+  },
+  {
+    "S NO": 83,
+    "Occupancy Description": "Cloth Processing units situated outside the compound of Textile mills and Cloth processing units which are not owned by the textile mills but are situated within the textile mills complex/compound.",
+    "Occupancy Code": "2053*",
+    "Flexa Rate": 1.1,
+    "Code": "C"
+  },
+  {
+    "S NO": 84,
+    "Occupancy Description": "Coal/Coke/Charcoal ball and briquettes Manufacturing",
+    "Occupancy Code": 2054,
+    "Flexa Rate": 1.63,
+    "Code": "C"
+  },
+  {
+    "S NO": 85,
+    "Occupancy Description": "Coal processing Plants",
+    "Occupancy Code": 2055,
+    "Flexa Rate": 0.77,
+    "Code": "C"
+  },
+  {
+    "S NO": 86,
+    "Occupancy Description": "Coffee Curing, Roasting / Grinding",
+    "Occupancy Code": 2056,
+    "Flexa Rate": 0.64,
+    "Code": "C"
+  },
+  {
+    "S NO": 87,
+    "Occupancy Description": "Coir Factories",
+    "Occupancy Code": 2057,
+    "Flexa Rate": 2.07,
+    "Code": "C"
+  },
+  {
+    "S NO": 88,
+    "Occupancy Description": "Collieries - Underground Machinery and Pit head gear and Dragline Machine used in Collieries",
+    "Occupancy Code": 2058,
+    "Flexa Rate": 1.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 89,
+    "Occupancy Description": "Condensed Milk Factories, Milk Pasteurising Plants and Dairies",
+    "Occupancy Code": "2059*",
+    "Flexa Rate": 0.5,
+    "Code": "C"
+  },
+  {
+    "S NO": 90,
+    "Occupancy Description": "Confectionery Manufacturing Plants/Sugar Candy Manufacturing Plants/Sweet Meat Manufacturing Plants",
+    "Occupancy Code": "2060*",
+    "Flexa Rate": 0.82,
+    "Code": "C"
+  },
+  {
+    "S NO": 91,
+    "Occupancy Description": "Contractors Plant and Machinery - At one location only",
+    "Occupancy Code": 2061,
+    "Flexa Rate": 0.89,
+    "Code": "C"
+  },
+  {
+    "S NO": 92,
+    "Occupancy Description": "Cork Products Manufacturing",
+    "Occupancy Code": 2062,
+    "Flexa Rate": 2.14,
+    "Code": "C"
+  },
+  {
+    "S NO": 93,
+    "Occupancy Description": "Cotton Gin and Press Houses",
+    "Occupancy Code": 2063,
+    "Flexa Rate": 1.79,
+    "Code": "C"
+  },
+  {
+    "S NO": 94,
+    "Occupancy Description": "Cotton Seed cleaning / Delinting Factory",
+    "Occupancy Code": 2064,
+    "Flexa Rate": 1.99,
+    "Code": "C"
+  },
+  {
+    "S NO": 95,
+    "Occupancy Description": "Dehydration Factories",
+    "Occupancy Code": "2065*",
+    "Flexa Rate": 0.69,
+    "Code": "C"
+  },
+  {
+    "S NO": 96,
+    "Occupancy Description": "Detergent Manufacturing with Sulphonation Plant",
+    "Occupancy Code": "2066*",
+    "Flexa Rate": 1.23,
+    "Code": "C"
+  },
+  {
+    "S NO": 97,
+    "Occupancy Description": "Detergent Manufacturing (Others)",
+    "Occupancy Code": 2067,
+    "Flexa Rate": 1.29,
+    "Code": "C"
+  },
+  {
+    "S NO": 98,
+    "Occupancy Description": "Distilleries",
+    "Occupancy Code": "2068*",
+    "Flexa Rate": 0.89,
+    "Code": "C"
+  },
+  {
+    "S NO": 99,
+    "Occupancy Description": "Duplicating/ stencil paper Manufacturing",
+    "Occupancy Code": 2069,
+    "Flexa Rate": 1.9,
+    "Code": "C"
+  },
+  {
+    "S NO": 100,
+    "Occupancy Description": "Electric Generation Stations - Hydro Power stations",
+    "Occupancy Code": "2070*",
+    "Flexa Rate": 0.45,
+    "Code": "C"
+  },
+  {
+    "S NO": 101,
+    "Occupancy Description": "Electric Lamp /T.V. Picture Tube Manufacturing",
+    "Occupancy Code": "2071*",
+    "Flexa Rate": 0.88,
+    "Code": "C"
+  },
+  {
+    "S NO": 102,
+    "Occupancy Description": "Electronic Goods Manufacturing / Assembly",
+    "Occupancy Code": "2072*",
+    "Flexa Rate": 0.83,
+    "Code": "C"
+  },
+  {
+    "S NO": 103,
+    "Occupancy Description": "Electronic Software Parks/Electronic Software Development Units",
+    "Occupancy Code": "2073*",
+    "Flexa Rate": 0.16,
+    "Code": "C"
+  },
+  {
+    "S NO": 104,
+    "Occupancy Description": "Enamel-ware factories",
+    "Occupancy Code": 2074,
+    "Flexa Rate": 1.07,
+    "Code": "C"
+  },
+  {
+    "S NO": 105,
+    "Occupancy Description": "Engineering Workshop - Structural Steel fabricators, Sheet Metal fabricators",
+    "Occupancy Code": "2075*",
+    "Flexa Rate": 0.32,
+    "Code": "C"
+  },
+  {
+    "S NO": 106,
+    "Occupancy Description": "Engineering Workshop (Others), Motor Vehicle Garages",
+    "Occupancy Code": "2076*",
+    "Flexa Rate": 0.61,
+    "Code": "C"
+  },
+  {
+    "S NO": 107,
+    "Occupancy Description": "Exhibitionsm, Fetes, Mandaps.",
+    "Occupancy Code": 2077,
+    "Flexa Rate": 3.07,
+    "Code": "C"
+  },
+  {
+    "S NO": 108,
+    "Occupancy Description": "Explosives / Blasting Factories",
+    "Occupancy Code": 2078,
+    "Flexa Rate": 2.28,
+    "Code": "C"
+  },
+  {
+    "S NO": 109,
+    "Occupancy Description": "Fertiliser Manufacturing (other than those rateable under Petrochemical Tariff)",
+    "Occupancy Code": "2079*",
+    "Flexa Rate": 1.13,
+    "Code": "C"
+  },
+  {
+    "S NO": 110,
+    "Occupancy Description": "Filter and wax paper Manufacturing",
+    "Occupancy Code": 2080,
+    "Flexa Rate": 1.99,
+    "Code": "C"
+  },
+  {
+    "S NO": 111,
+    "Occupancy Description": "Fireworks Manufacturing",
+    "Occupancy Code": 2081,
+    "Flexa Rate": 2.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 112,
+    "Occupancy Description": "Flax / Hemp Mills",
+    "Occupancy Code": 2082,
+    "Flexa Rate": 1.27,
+    "Code": "C"
+  },
+  {
+    "S NO": 113,
+    "Occupancy Description": "Flour Mills",
+    "Occupancy Code": "2083*",
+    "Flexa Rate": 1.35,
+    "Code": "C"
+  },
+  {
+    "S NO": 114,
+    "Occupancy Description": "Foamed Plastics Manufacturing and / or converting plants",
+    "Occupancy Code": "2084*",
+    "Flexa Rate": 2.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 115,
+    "Occupancy Description": "Foam Rubber Manufacturing",
+    "Occupancy Code": 2085,
+    "Flexa Rate": 2.48,
+    "Code": "C"
+  },
+  {
+    "S NO": 116,
+    "Occupancy Description": "French Polish Manufacturing",
+    "Occupancy Code": 2086,
+    "Flexa Rate": 2.7,
+    "Code": "C"
+  },
+  {
+    "S NO": 117,
+    "Occupancy Description": "Fruit and vegetable drying/ dehydrating factories",
+    "Occupancy Code": "2087*",
+    "Flexa Rate": 0.88,
+    "Code": "C"
+  },
+  {
+    "S NO": 118,
+    "Occupancy Description": "Fruit products and Condiment Factories (including fruit pulp making)",
+    "Occupancy Code": "2088*",
+    "Flexa Rate": 0.64,
+    "Code": "C"
+  },
+  {
+    "S NO": 119,
+    "Occupancy Description": "Garment Makers, Topee, Hats and the like makers",
+    "Occupancy Code": "2089*",
+    "Flexa Rate": 0.97,
+    "Code": "C"
+  },
+  {
+    "S NO": 120,
+    "Occupancy Description": "Ghee Factories including vegetable Ghee mfg.",
+    "Occupancy Code": "2090*",
+    "Flexa Rate": 1.2,
+    "Code": "C"
+  },
+  {
+    "S NO": 121,
+    "Occupancy Description": "Glass Fibre Manufacturing",
+    "Occupancy Code": 2091,
+    "Flexa Rate": 0.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 122,
+    "Occupancy Description": "Glass wool Manufacturing",
+    "Occupancy Code": 2092,
+    "Flexa Rate": 1.45,
+    "Code": "C"
+  },
+  {
+    "S NO": 123,
+    "Occupancy Description": "Glass Manufacturing/Automobile Glass Manufacturing",
+    "Occupancy Code": "2093*",
+    "Flexa Rate": 0.92,
+    "Code": "C"
+  },
+  {
+    "S NO": 124,
+    "Occupancy Description": "Gold thread factories / Gilding factories",
+    "Occupancy Code": 2094,
+    "Flexa Rate": 0.72,
+    "Code": "C"
+  },
+  {
+    "S NO": 125,
+    "Occupancy Description": "Granite Factories using inflammable solvents",
+    "Occupancy Code": 2095,
+    "Flexa Rate": 0.62,
+    "Code": "C"
+  },
+  {
+    "S NO": 126,
+    "Occupancy Description": "Granite Factories (Others)",
+    "Occupancy Code": 2096,
+    "Flexa Rate": 0.29,
+    "Code": "C"
+  },
+  {
+    "S NO": 127,
+    "Occupancy Description": "Graphite electrode Manufacturing",
+    "Occupancy Code": 2097,
+    "Flexa Rate": 1.32,
+    "Code": "C"
+  },
+  {
+    "S NO": 128,
+    "Occupancy Description": "Grain/seeds disintegrating/crushing/ Decorticating factories/ Dal mills.",
+    "Occupancy Code": "2098*",
+    "Flexa Rate": 0.93,
+    "Code": "C"
+  },
+  {
+    "S NO": 129,
+    "Occupancy Description": "Grease / Wax Manufacturing",
+    "Occupancy Code": 2099,
+    "Flexa Rate": 1.43,
+    "Code": "C"
+  },
+  {
+    "S NO": 130,
+    "Occupancy Description": "Green Houses/Algae/ Spirulina and the like",
+    "Occupancy Code": 2100,
+    "Flexa Rate": 1.15,
+    "Code": "C"
+  },
+  {
+    "S NO": 131,
+    "Occupancy Description": "Gum/Glue/Gelatine Manufacturing",
+    "Occupancy Code": "2101*",
+    "Flexa Rate": 0.94,
+    "Code": "C"
+  },
+  {
+    "S NO": 132,
+    "Occupancy Description": "Gypsum board manufacturer",
+    "Occupancy Code": 2102,
+    "Flexa Rate": 0.97,
+    "Code": "C"
+  },
+  {
+    "S NO": 133,
+    "Occupancy Description": "Hosiery, lace, Embroidery/Thread factories",
+    "Occupancy Code": "2103*",
+    "Flexa Rate": 1.11,
+    "Code": "C"
+  },
+  {
+    "S NO": 134,
+    "Occupancy Description": "Ice candy and Ice Cream Manufacturing",
+    "Occupancy Code": "2104*",
+    "Flexa Rate": 0.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 135,
+    "Occupancy Description": "Ice factories",
+    "Occupancy Code": 2105,
+    "Flexa Rate": 0.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 136,
+    "Occupancy Description": "Incandescent Gas mantle Manufacturing",
+    "Occupancy Code": 2106,
+    "Flexa Rate": 1.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 137,
+    "Occupancy Description": "Industrial Diamonds Manufacturing",
+    "Occupancy Code": 2107,
+    "Flexa Rate": 0.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 138,
+    "Occupancy Description": "Industrial Gas Manufacturing",
+    "Occupancy Code": "2108*",
+    "Flexa Rate": 1.33,
+    "Code": "C"
+  },
+  {
+    "S NO": 139,
+    "Occupancy Description": "Ink (excluding printing ink) Manufacturing",
+    "Occupancy Code": "2109*",
+    "Flexa Rate": 1.29,
+    "Code": "C"
+  },
+  {
+    "S NO": 140,
+    "Occupancy Description": "Jaggery Manufacturing",
+    "Occupancy Code": 2110,
+    "Flexa Rate": 0.77,
+    "Code": "C"
+  },
+  {
+    "S NO": 141,
+    "Occupancy Description": "Jute Mills",
+    "Occupancy Code": "2111*",
+    "Flexa Rate": 2.58,
+    "Code": "C"
+  },
+  {
+    "S NO": 142,
+    "Occupancy Description": "Katha Manufacturing",
+    "Occupancy Code": 2112,
+    "Flexa Rate": 1.89,
+    "Code": "C"
+  },
+  {
+    "S NO": 143,
+    "Occupancy Description": "Khandsari Sugar Manufacturing",
+    "Occupancy Code": 2113,
+    "Flexa Rate": 0.98,
+    "Code": "C"
+  },
+  {
+    "S NO": 144,
+    "Occupancy Description": "Lac or Shellac Factories",
+    "Occupancy Code": 2114,
+    "Flexa Rate": 1.4,
+    "Code": "C"
+  },
+  {
+    "S NO": 145,
+    "Occupancy Description": "Leather Cloth Factories",
+    "Occupancy Code": "2115*",
+    "Flexa Rate": 1.98,
+    "Code": "C"
+  },
+  {
+    "S NO": 146,
+    "Occupancy Description": "Leather Goods Manufacturing (incl. boot/shoe)",
+    "Occupancy Code": "2116*",
+    "Flexa Rate": 1.09,
+    "Code": "C"
+  },
+  {
+    "S NO": 147,
+    "Occupancy Description": "Lime Kiln",
+    "Occupancy Code": 2117,
+    "Flexa Rate": 0.68,
+    "Code": "C"
+  },
+  {
+    "S NO": 148,
+    "Occupancy Description": "Lithographic Presses",
+    "Occupancy Code": 2118,
+    "Flexa Rate": 1.16,
+    "Code": "C"
+  },
+  {
+    "S NO": 149,
+    "Occupancy Description": "Liquefied Gas Bottling/Recovery Plants",
+    "Occupancy Code": 2119,
+    "Flexa Rate": 0.91,
+    "Code": "C"
+  },
+  {
+    "S NO": 150,
+    "Occupancy Description": "Malt Extraction Plants",
+    "Occupancy Code": "2120*",
+    "Flexa Rate": 0.95,
+    "Code": "C"
+  },
+  {
+    "S NO": 151,
+    "Occupancy Description": "Man-made Fibre Manufacturing (using Cellulose)",
+    "Occupancy Code": "2121*",
+    "Flexa Rate": 0.47,
+    "Code": "C"
+  },
+  {
+    "S NO": 152,
+    "Occupancy Description": "Man-made Fibre Manufacturing Plant (Others)",
+    "Occupancy Code": "2122*",
+    "Flexa Rate": 0.52,
+    "Code": "C"
+  },
+  {
+    "S NO": 153,
+    "Occupancy Description": "Manure Blending Works",
+    "Occupancy Code": 2123,
+    "Flexa Rate": 0.97,
+    "Code": "C"
+  },
+  {
+    "S NO": 154,
+    "Occupancy Description": "Match Factories",
+    "Occupancy Code": 2124,
+    "Flexa Rate": 2.76,
+    "Code": "C"
+  },
+  {
+    "S NO": 155,
+    "Occupancy Description": "Mattress and Pillow making",
+    "Occupancy Code": 2125,
+    "Flexa Rate": 2.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 156,
+    "Occupancy Description": "Metallizing works (involving metals only)",
+    "Occupancy Code": 2126,
+    "Flexa Rate": 0.58,
+    "Code": "C"
+  },
+  {
+    "S NO": 157,
+    "Occupancy Description": "Metallizing Works (Others)",
+    "Occupancy Code": 2127,
+    "Flexa Rate": 0.76,
+    "Code": "C"
+  },
+  {
+    "S NO": 158,
+    "Occupancy Description": "Metal/Tin Printers",
+    "Occupancy Code": 2128,
+    "Flexa Rate": 2.09,
+    "Code": "C"
+  },
+  {
+    "S NO": 159,
+    "Occupancy Description": "Mica Products Manufacturing",
+    "Occupancy Code": 2129,
+    "Flexa Rate": 1.04,
+    "Code": "C"
+  },
+  {
+    "S NO": 160,
+    "Occupancy Description": "Mineral Oil blending and processing",
+    "Occupancy Code": 2130,
+    "Flexa Rate": 0.61,
+    "Code": "C"
+  },
+  {
+    "S NO": 161,
+    "Occupancy Description": "Mosaic Factories",
+    "Occupancy Code": 2131,
+    "Flexa Rate": 0.8,
+    "Code": "C"
+  },
+  {
+    "S NO": 162,
+    "Occupancy Description": "Mushroom Growing Premises (Excluding Crops)",
+    "Occupancy Code": 2132,
+    "Flexa Rate": 0.75,
+    "Code": "C"
+  },
+  {
+    "S NO": 163,
+    "Occupancy Description": "Nitro Cellulose Manufacturing -  Industrial Grade",
+    "Occupancy Code": 2133,
+    "Flexa Rate": 9.27,
+    "Code": "C"
+  },
+  {
+    "S NO": 164,
+    "Occupancy Description": "Non-woven fabric Manufacturing",
+    "Occupancy Code": "2134*",
+    "Flexa Rate": 1.81,
+    "Code": "C"
+  },
+  {
+    "S NO": 165,
+    "Occupancy Description": "Oil Extraction",
+    "Occupancy Code": "2135*",
+    "Flexa Rate": 1.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 166,
+    "Occupancy Description": "Oil Distillation Plants (essential)",
+    "Occupancy Code": "2136*",
+    "Flexa Rate": 1.2,
+    "Code": "C"
+  },
+  {
+    "S NO": 167,
+    "Occupancy Description": "Oil Mills refining (Veg/Animal)",
+    "Occupancy Code": "2137*",
+    "Flexa Rate": 0.99,
+    "Code": "C"
+  },
+  {
+    "S NO": 168,
+    "Occupancy Description": "Oil Mills (Vegetable)",
+    "Occupancy Code": "2138*",
+    "Flexa Rate": 0.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 169,
+    "Occupancy Description": "Oil and Leater Cloth Factories",
+    "Occupancy Code": 2139,
+    "Flexa Rate": 2.02,
+    "Code": "C"
+  },
+  {
+    "S NO": 170,
+    "Occupancy Description": "Paint factories (Water based)",
+    "Occupancy Code": "2140*",
+    "Flexa Rate": 1.15,
+    "Code": "C"
+  },
+  {
+    "S NO": 171,
+    "Occupancy Description": "Paint (others) and Varnish Factories",
+    "Occupancy Code": "2141*",
+    "Flexa Rate": 1.82,
+    "Code": "C"
+  },
+  {
+    "S NO": 172,
+    "Occupancy Description": "Paints- Nitrocellulose based",
+    "Occupancy Code": "2142*",
+    "Flexa Rate": 2.21,
+    "Code": "C"
+  },
+  {
+    "S NO": 173,
+    "Occupancy Description": "Pan Masala Making",
+    "Occupancy Code": "2143*",
+    "Flexa Rate": 1.04,
+    "Code": "C"
+  },
+  {
+    "S NO": 174,
+    "Occupancy Description": "Paper and Cardboard Mills (including Lamination)",
+    "Occupancy Code": "2144*",
+    "Flexa Rate": 1.04,
+    "Code": "C"
+  },
+  {
+    "S NO": 175,
+    "Occupancy Description": "Particle Board Manufacturing",
+    "Occupancy Code": "2145*",
+    "Flexa Rate": 1.82,
+    "Code": "C"
+  },
+  {
+    "S NO": 176,
+    "Occupancy Description": "Pencil Manufacturing",
+    "Occupancy Code": 2146,
+    "Flexa Rate": 1.72,
+    "Code": "C"
+  },
+  {
+    "S NO": 177,
+    "Occupancy Description": "Petroleum Coke Calcination",
+    "Occupancy Code": "2147*",
+    "Flexa Rate": 0.95,
+    "Code": "C"
+  },
+  {
+    "S NO": 178,
+    "Occupancy Description": "Plastic Goods Manufacturing ( excluding Foam Plastics)/ I. Using Plastic raw materials having calorific value upto 15,000 btu/Ib Polytetrafluoroethylene, polychorotrif, fluroehtylene, polyvinyl chloride, polyvinylidene chloride, polyvinylidene fluoride, Chlorinated polyether, polycarbonate, polymethyl methacrylate, Phenol Formaldehyde, Urea-formaldehyde. Melamine-formaldehyde, polyurethane, polyester, Silicones.",
+    "Occupancy Code": 2148,
+    "Flexa Rate": 1.62,
+    "Code": "C"
+  },
+  {
+    "S NO": 179,
+    "Occupancy Description": "Plywood / Wood veneering Factories/ Laminating Factories",
+    "Occupancy Code": "2149*",
+    "Flexa Rate": 2.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 180,
+    "Occupancy Description": "Polyester Film Manufacturing /BOPP Film Manufacturing",
+    "Occupancy Code": "2150*",
+    "Flexa Rate": 0.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 181,
+    "Occupancy Description": "Port Premises including jetties and equipment thereon and other port facilities",
+    "Occupancy Code": 2151,
+    "Flexa Rate": 0.39,
+    "Code": "C"
+  },
+  {
+    "S NO": 182,
+    "Occupancy Description": "Poultry Farms (Excluding Birds therein)",
+    "Occupancy Code": 2152,
+    "Flexa Rate": 0.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 183,
+    "Occupancy Description": "Presses for coir Fibres/Waste/Grass/Fodder/Boosa/Jute",
+    "Occupancy Code": 2153,
+    "Flexa Rate": 6.08,
+    "Code": "C"
+  },
+  {
+    "S NO": 184,
+    "Occupancy Description": "Presses for coir yarn / cotton/ senna leaves",
+    "Occupancy Code": 2154,
+    "Flexa Rate": 2.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 185,
+    "Occupancy Description": "Presses for carpets, rugs and tobacco",
+    "Occupancy Code": 2155,
+    "Flexa Rate": 2.17,
+    "Code": "C"
+  },
+  {
+    "S NO": 186,
+    "Occupancy Description": "Presses for hides and skins",
+    "Occupancy Code": 2156,
+    "Flexa Rate": 1.6,
+    "Code": "C"
+  },
+  {
+    "S NO": 187,
+    "Occupancy Description": "Printing ink Manufacturing / Roller composition factories",
+    "Occupancy Code": "2157*",
+    "Flexa Rate": 1.57,
+    "Code": "C"
+  },
+  {
+    "S NO": 188,
+    "Occupancy Description": "Printing Press",
+    "Occupancy Code": "2158*",
+    "Flexa Rate": 0.98,
+    "Code": "C"
+  },
+  {
+    "S NO": 189,
+    "Occupancy Description": "Pulverising Plants (Metals and non-hazardous goods)",
+    "Occupancy Code": 2159,
+    "Flexa Rate": 0.5,
+    "Code": "C"
+  },
+  {
+    "S NO": 190,
+    "Occupancy Description": "Pulverizing Plants (others)",
+    "Occupancy Code": 2160,
+    "Flexa Rate": 1.51,
+    "Code": "C"
+  },
+  {
+    "S NO": 191,
+    "Occupancy Description": "Rice Mills",
+    "Occupancy Code": "2161*",
+    "Flexa Rate": 0.73,
+    "Code": "C"
+  },
+  {
+    "S NO": 192,
+    "Occupancy Description": "Rice Polishing Units",
+    "Occupancy Code": "2162*",
+    "Flexa Rate": 0.84,
+    "Code": "C"
+  },
+  {
+    "S NO": 193,
+    "Occupancy Description": "Rope works (Plastic), Assembling of Plastic Goods such as Toys and the like",
+    "Occupancy Code": "2163*",
+    "Flexa Rate": 1.25,
+    "Code": "C"
+  },
+  {
+    "S NO": 194,
+    "Occupancy Description": "Rope Works (others)",
+    "Occupancy Code": 2164,
+    "Flexa Rate": 0.78,
+    "Code": "C"
+  },
+  {
+    "S NO": 195,
+    "Occupancy Description": "Rubber Factories",
+    "Occupancy Code": "2165*",
+    "Flexa Rate": 1.57,
+    "Code": "C"
+  },
+  {
+    "S NO": 196,
+    "Occupancy Description": "Rubber Goods Mfg with Spreading",
+    "Occupancy Code": "2166*",
+    "Flexa Rate": 1.92,
+    "Code": "C"
+  },
+  {
+    "S NO": 197,
+    "Occupancy Description": "Rubber Goods Manufacturing without spreading",
+    "Occupancy Code": "2167*",
+    "Flexa Rate": 1.15,
+    "Code": "C"
+  },
+  {
+    "S NO": 198,
+    "Occupancy Description": "Salt crushing Factories and Refineries",
+    "Occupancy Code": 2168,
+    "Flexa Rate": 0.45,
+    "Code": "C"
+  },
+  {
+    "S NO": 199,
+    "Occupancy Description": "Saw Mills (including Timber Merchants premises where sawing is done.)",
+    "Occupancy Code": "2169*",
+    "Flexa Rate": 2.84,
+    "Code": "C"
+  },
+  {
+    "S NO": 200,
+    "Occupancy Description": "Sea Food / Meat Processing",
+    "Occupancy Code": "2170*",
+    "Flexa Rate": 1.1,
+    "Code": "C"
+  },
+  {
+    "S NO": 201,
+    "Occupancy Description": "Silk Mills / Spun Silk Mills",
+    "Occupancy Code": "2171*",
+    "Flexa Rate": 0.84,
+    "Code": "C"
+  },
+  {
+    "S NO": 202,
+    "Occupancy Description": "Snuff Manufacturing",
+    "Occupancy Code": 2172,
+    "Flexa Rate": 1.08,
+    "Code": "C"
+  },
+  {
+    "S NO": 203,
+    "Occupancy Description": "Soap Manufacturing",
+    "Occupancy Code": "2173*",
+    "Flexa Rate": 1.09,
+    "Code": "C"
+  },
+  {
+    "S NO": 204,
+    "Occupancy Description": "Sponge Iron Plants",
+    "Occupancy Code": "2174*",
+    "Flexa Rate": 0.85,
+    "Code": "C"
+  },
+  {
+    "S NO": 205,
+    "Occupancy Description": "Spray Painting, Powder coating",
+    "Occupancy Code": 2175,
+    "Flexa Rate": 1.5,
+    "Code": "C"
+  },
+  {
+    "S NO": 206,
+    "Occupancy Description": "Stables (excluding animals)",
+    "Occupancy Code": 2176,
+    "Flexa Rate": 0.77,
+    "Code": "C"
+  },
+  {
+    "S NO": 207,
+    "Occupancy Description": "Starch Factories",
+    "Occupancy Code": 2177,
+    "Flexa Rate": 0.75,
+    "Code": "C"
+  },
+  {
+    "S NO": 208,
+    "Occupancy Description": "Stone quarries",
+    "Occupancy Code": 2178,
+    "Flexa Rate": 0.27,
+    "Code": "C"
+  },
+  {
+    "S NO": 209,
+    "Occupancy Description": "Sugar factories",
+    "Occupancy Code": "2180*",
+    "Flexa Rate": 0.55,
+    "Code": "C"
+  },
+  {
+    "S NO": 210,
+    "Occupancy Description": "Surgical Cotton Manufacturing",
+    "Occupancy Code": 2181,
+    "Flexa Rate": 2.56,
+    "Code": "C"
+  },
+  {
+    "S NO": 211,
+    "Occupancy Description": "Tanneries",
+    "Occupancy Code": 2183,
+    "Flexa Rate": 0.52,
+    "Code": "C"
+  },
+  {
+    "S NO": 212,
+    "Occupancy Description": "Tapioca factories",
+    "Occupancy Code": 2184,
+    "Flexa Rate": 1.07,
+    "Code": "C"
+  },
+  {
+    "S NO": 213,
+    "Occupancy Description": "Tarpaulin and canvas proofing factories",
+    "Occupancy Code": 2185,
+    "Flexa Rate": 2.28,
+    "Code": "C"
+  },
+  {
+    "S NO": 214,
+    "Occupancy Description": "Tea blending/ packing factories",
+    "Occupancy Code": 2186,
+    "Flexa Rate": 0.7,
+    "Code": "C"
+  },
+  {
+    "S NO": 215,
+    "Occupancy Description": "Tea Factories",
+    "Occupancy Code": 2187,
+    "Flexa Rate": 1.12,
+    "Code": "C"
+  },
+  {
+    "S NO": 216,
+    "Occupancy Description": "Telephone Exchanges",
+    "Occupancy Code": 2188,
+    "Flexa Rate": 1.93,
+    "Code": "C"
+  },
+  {
+    "S NO": 217,
+    "Occupancy Description": "Textile Mills -  Spinning mills",
+    "Occupancy Code": "2189*",
+    "Flexa Rate": 0.97,
+    "Code": "C"
+  },
+  {
+    "S NO": 218,
+    "Occupancy Description": "Tile and Pottery works",
+    "Occupancy Code": "2190*",
+    "Flexa Rate": 0.71,
+    "Code": "C"
+  },
+  {
+    "S NO": 219,
+    "Occupancy Description": "Tiny sector Industries with values at risk not exceeding Rs 10 laksh",
+    "Occupancy Code": 2191,
+    "Flexa Rate": 0.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 220,
+    "Occupancy Description": "Tissue Culture Premises (Excluding Crops)",
+    "Occupancy Code": 2192,
+    "Flexa Rate": 0.8,
+    "Code": "C"
+  },
+  {
+    "S NO": 221,
+    "Occupancy Description": "Tobacco Curing /  Redrying Factories",
+    "Occupancy Code": 2193,
+    "Flexa Rate": 1.19,
+    "Code": "C"
+  },
+  {
+    "S NO": 222,
+    "Occupancy Description": "Tobacco Grinding/ crushing Manufacturing",
+    "Occupancy Code": 2194,
+    "Flexa Rate": 1.17,
+    "Code": "C"
+  },
+  {
+    "S NO": 223,
+    "Occupancy Description": "Turpentine and rosin distilleries",
+    "Occupancy Code": 2195,
+    "Flexa Rate": 3.85,
+    "Code": "C"
+  },
+  {
+    "S NO": 224,
+    "Occupancy Description": "Tyres and Tubes Manufacturing",
+    "Occupancy Code": "2196*",
+    "Flexa Rate": 0.92,
+    "Code": "C"
+  },
+  {
+    "S NO": 225,
+    "Occupancy Description": "Tyre Retreading and Resoling factories",
+    "Occupancy Code": 2197,
+    "Flexa Rate": 1.6,
+    "Code": "C"
+  },
+  {
+    "S NO": 226,
+    "Occupancy Description": "Umbrella Assembly factories",
+    "Occupancy Code": 2198,
+    "Flexa Rate": 0.99,
+    "Code": "C"
+  },
+  {
+    "S NO": 227,
+    "Occupancy Description": "Velvet Cloth Manufacturing",
+    "Occupancy Code": "2199*",
+    "Flexa Rate": 1.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 228,
+    "Occupancy Description": "Vermicelli factories",
+    "Occupancy Code": "2200*",
+    "Flexa Rate": 0.74,
+    "Code": "C"
+  },
+  {
+    "S NO": 229,
+    "Occupancy Description": "Weigh Bridges",
+    "Occupancy Code": 2201,
+    "Flexa Rate": 0.89,
+    "Code": "C"
+  },
+  {
+    "S NO": 230,
+    "Occupancy Description": "Weavig Mills",
+    "Occupancy Code": "2202*",
+    "Flexa Rate": 0.87,
+    "Code": "C"
+  },
+  {
+    "S NO": 231,
+    "Occupancy Description": "Wheat Threshers",
+    "Occupancy Code": 2203,
+    "Flexa Rate": 5.5,
+    "Code": "C"
+  },
+  {
+    "S NO": 232,
+    "Occupancy Description": "Wood seasoning/treatment/ impregnation",
+    "Occupancy Code": 2204,
+    "Flexa Rate": 0.93,
+    "Code": "C"
+  },
+  {
+    "S NO": 233,
+    "Occupancy Description": "Wool cleaning and pressing factories",
+    "Occupancy Code": 2205,
+    "Flexa Rate": 1.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 234,
+    "Occupancy Description": "Woollen Mills/ Fur Garments and accessories",
+    "Occupancy Code": "2206*",
+    "Flexa Rate": 1.09,
+    "Code": "C"
+  },
+  {
+    "S NO": 235,
+    "Occupancy Description": "Yarn Processing",
+    "Occupancy Code": "2207*",
+    "Flexa Rate": 0.99,
+    "Code": "C"
+  },
+  {
+    "S NO": 236,
+    "Occupancy Description": "Zip fasteners Manufacturing",
+    "Occupancy Code": 2208,
+    "Flexa Rate": 1.53,
+    "Code": "C"
+  },
+  {
+    "S NO": 237,
+    "Occupancy Description": "Contractors Plant and Machinery anywhere in india (at specified locations)",
+    "Occupancy Code": 2209,
+    "Flexa Rate": 0.96,
+    "Code": "C"
+  },
+  {
+    "S NO": 238,
+    "Occupancy Description": "Electric Generation Stations - Others",
+    "Occupancy Code": "2210*",
+    "Flexa Rate": 0.61,
+    "Code": "C"
+  },
+  {
+    "S NO": 239,
+    "Occupancy Description": "Textile Mills - Composite Mills",
+    "Occupancy Code": "2211*",
+    "Flexa Rate": 1.65,
+    "Code": "C"
+  },
+  {
+    "S NO": 240,
+    "Occupancy Description": "Automobile Filter Manufacturing",
+    "Occupancy Code": 2212,
+    "Flexa Rate": 1.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 241,
+    "Occupancy Description": "Plastic Goods Manufacturing ( excluding Foam Plastics)/II. Using Plastic raw materials having calorific value of above 15000 btu/ib Polyethylene, Polypropylene, Polystyrene, Poly-alphamethylstyrene, Acrylonitrilebutadiene- styrene, Polybutylene.",
+    "Occupancy Code": 2216,
+    "Flexa Rate": 1.28,
+    "Code": "C"
+  },
+  {
+    "S NO": 242,
+    "Occupancy Description": "Electric Generation Stations - Thermal Power Stations",
+    "Occupancy Code": 2217,
+    "Flexa Rate": 0.43,
+    "Code": "C"
+  },
+  {
+    "S NO": 243,
+    "Occupancy Description": "Electric Generation Stations - Solar Power Plants",
+    "Occupancy Code": 2218,
+    "Flexa Rate": 0.66,
+    "Code": "C"
+  },
+  {
+    "S NO": 244,
+    "Occupancy Description": "Electric Generation stations -  Windmill",
+    "Occupancy Code": 2219,
+    "Flexa Rate": 0.74,
+    "Code": "C"
+  },
+  {
+    "S NO": 245,
+    "Occupancy Description": "Electric Generation Stations - Biomass Power Stations",
+    "Occupancy Code": 2221,
+    "Flexa Rate": 0.75,
+    "Code": "C"
+  },
+  {
+    "S NO": 246,
+    "Occupancy Description": "Engineering Workshop - Steel Plants",
+    "Occupancy Code": 2222,
+    "Flexa Rate": 0.41,
+    "Code": "C"
+  },
+  {
+    "S NO": 247,
+    "Occupancy Description": "Engineering Workshop - Pipe Extruding, Stamping, Pressing, Forging Mills, Metal Smelting, Foundries, Galvanising Work",
+    "Occupancy Code": 2224,
+    "Flexa Rate": 0.4,
+    "Code": "C"
+  },
+  {
+    "S NO": 248,
+    "Occupancy Description": "Engineering Workshop - Metal Extraction, Ore Processing (other than Aluminium, Copper, Zinc), Plant processing Raw Sand into Silica",
+    "Occupancy Code": 2225,
+    "Flexa Rate": 0.89,
+    "Code": "C"
+  },
+  {
+    "S NO": 249,
+    "Occupancy Description": "Engineering Workshop - Clock / Watch Manufacturing",
+    "Occupancy Code": 2227,
+    "Flexa Rate": 1.93,
+    "Code": "C"
+  },
+  {
+    "S NO": 250,
+    "Occupancy Description": "Multiplex theatre Complexes",
+    "Occupancy Code": 2229,
+    "Flexa Rate": 0.77,
+    "Code": "B"
+  },
+  {
+    "S NO": 251,
+    "Occupancy Description": "Shopping Malls (other than Multiplexes)",
+    "Occupancy Code": 2230,
+    "Flexa Rate": 0.55,
+    "Code": "B"
+  },
+  {
+    "S NO": 252,
+    "Occupancy Description": "Disposable Diaper Manufacturing",
+    "Occupancy Code": 2231,
+    "Flexa Rate": 1.38,
+    "Code": "C"
+  },
+  {
+    "S NO": 253,
+    "Occupancy Description": "Analyticl / Quality Control Laboratories",
+    "Occupancy Code": 3001,
+    "Flexa Rate": 0.54,
+    "Code": "B"
+  },
+  {
+    "S NO": 254,
+    "Occupancy Description": "Boiler House",
+    "Occupancy Code": 3002,
+    "Flexa Rate": 0.45,
+    "Code": "C"
+  },
+  {
+    "S NO": 255,
+    "Occupancy Description": "Dams",
+    "Occupancy Code": 3003,
+    "Flexa Rate": 0.37,
+    "Code": "C"
+  },
+  {
+    "S NO": 256,
+    "Occupancy Description": "Effluent /Sewage Treatment Plants",
+    "Occupancy Code": 3004,
+    "Flexa Rate": 0.7,
+    "Code": "C"
+  },
+  {
+    "S NO": 257,
+    "Occupancy Description": "Electric sub-Stations, Loco sheds",
+    "Occupancy Code": 3005,
+    "Flexa Rate": 0.26,
+    "Code": "C"
+  },
+  {
+    "S NO": 258,
+    "Occupancy Description": "Electric transmission / Distribution Lines",
+    "Occupancy Code": 3006,
+    "Flexa Rate": 0.15,
+    "Code": "I"
+  },
+  {
+    "S NO": 259,
+    "Occupancy Description": "Pipe Lines (carrying water only)",
+    "Occupancy Code": "3007*",
+    "Flexa Rate": 0.4,
+    "Code": "G"
+  },
+  {
+    "S NO": 260,
+    "Occupancy Description": "Pipe Lines (others)",
+    "Occupancy Code": "3008*",
+    "Flexa Rate": 0.48,
+    "Code": "C"
+  },
+  {
+    "S NO": 261,
+    "Occupancy Description": "Pump Houses (Water)",
+    "Occupancy Code": 3009,
+    "Flexa Rate": 0.36,
+    "Code": "C"
+  },
+  {
+    "S NO": 262,
+    "Occupancy Description": "Pump Houses (Others)",
+    "Occupancy Code": 3010,
+    "Flexa Rate": 1.25,
+    "Code": "C"
+  },
+  {
+    "S NO": 263,
+    "Occupancy Description": "Railway Tracks",
+    "Occupancy Code": 3011,
+    "Flexa Rate": 0.9,
+    "Code": "H"
+  },
+  {
+    "S NO": 264,
+    "Occupancy Description": "Roads",
+    "Occupancy Code": "3012*",
+    "Flexa Rate": 0.55,
+    "Code": "F"
+  },
+  {
+    "S NO": 265,
+    "Occupancy Description": "Water Treatment Plants / Water Tanks",
+    "Occupancy Code": 3013,
+    "Flexa Rate": 0.14,
+    "Code": "C"
+  },
+  {
+    "S NO": 266,
+    "Occupancy Description": "Wireless Transmitting Stations",
+    "Occupancy Code": 3014,
+    "Flexa Rate": 0.52,
+    "Code": "C"
+  },
+  {
+    "S NO": 267,
+    "Occupancy Description": "Compressor Houses - Compressors handling air, Inert Gas and CO2",
+    "Occupancy Code": 3015,
+    "Flexa Rate": 0.8,
+    "Code": "C"
+  },
+  {
+    "S NO": 268,
+    "Occupancy Description": "Compressor Houses - Compressors (others)",
+    "Occupancy Code": 3016,
+    "Flexa Rate": 2.39,
+    "Code": "C"
+  },
+  {
+    "S NO": 269,
+    "Occupancy Description": "Boundary Walls - Made up of Combustible Materal",
+    "Occupancy Code": 3017,
+    "Flexa Rate": 1.78,
+    "Code": "C"
+  },
+  {
+    "S NO": 270,
+    "Occupancy Description": "Boundary Walls- Others",
+    "Occupancy Code": 3018,
+    "Flexa Rate": 0.78,
+    "Code": "C"
+  },
+  {
+    "S NO": 271,
+    "Occupancy Description": "Electric Crematoriums",
+    "Occupancy Code": 3019,
+    "Flexa Rate": 0.68,
+    "Code": "c"
+  },
+  {
+    "S NO": 272,
+    "Occupancy Description": "Storage of Non-hazardous goods subject to warranty that hazardous goods of Category I, II, III, Coir waste, Coir fibre, and Caddies are not stored therein. (Materials Stored in Godowns & Silos).",
+    "Occupancy Code": "4001*",
+    "Flexa Rate": 0.46,
+    "Code": "D"
+  },
+  {
+    "S NO": 273,
+    "Occupancy Description": "Storage of Category I hazardous Goods subject to warranty that goods listed in Category II, III, Coir waste, Coir fibre, and Caddies are not stored therein. (Materials stored in Godowns & Silos)",
+    "Occupancy Code": "4002*",
+    "Flexa Rate": 0.98,
+    "Code": "D"
+  },
+  {
+    "S NO": 274,
+    "Occupancy Description": "Storage of hazardous Goods listed in Category II subject to warranty that goods listed in Category III, Coir waste, Coir fibre and Caddies are not stored therein. (Materials stored in Godowns & Silos)",
+    "Occupancy Code": "4003*",
+    "Flexa Rate": 2.16,
+    "Code": "D"
+  },
+  {
+    "S NO": 275,
+    "Occupancy Description": "Storage of hazardous Goods listed in Category III subject to warranty that Coir waste, Coir fibre and Caddies are not stored therein. (Materials stored in Godowns & Silos)",
+    "Occupancy Code": "4004*",
+    "Flexa Rate": 3.1,
+    "Code": "D"
+  },
+  {
+    "S NO": 276,
+    "Occupancy Description": "Transporter's Godowns and Godowns of clearing and forwarding agents. (Materials stored in Godowns & Silos)",
+    "Occupancy Code": "4005*",
+    "Flexa Rate": 0.72,
+    "Code": "D"
+  },
+  {
+    "S NO": 277,
+    "Occupancy Description": "Storage of Coir waste , Coir Fibre, Caddies (Materials stored in Godowns & Silos",
+    "Occupancy Code": 4006,
+    "Flexa Rate": 6.13,
+    "Code": "D"
+  },
+  {
+    "S NO": 278,
+    "Occupancy Description": "Cold Storage premises",
+    "Occupancy Code": "4007*",
+    "Flexa Rate": 1.07,
+    "Code": "D"
+  },
+  {
+    "S NO": 279,
+    "Occupancy Description": "Gas Holders/ Bullets/spheres and storages for liquefied gases except for nitrogen, Carbon dioxide and inert gases",
+    "Occupancy Code": "4008*",
+    "Flexa Rate": 2.25,
+    "Code": "D"
+  },
+  {
+    "S NO": 280,
+    "Occupancy Description": "XXX",
+    "Occupancy Code": "4009*",
+    "Flexa Rate": 1.02,
+    "Code": "C"
+  },
+  {
+    "S NO": 281,
+    "Occupancy Description": "Tanks containing liquids flashing at 32°C and below",
+    "Occupancy Code": "4010*",
+    "Flexa Rate": 1.41,
+    "Code": "C"
+  },
+  {
+    "S NO": 282,
+    "Occupancy Description": "Tanks (others)",
+    "Occupancy Code": "4011*",
+    "Flexa Rate": 0.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 283,
+    "Occupancy Description": "Storage of Non-hazardous goods subject to warranty that hazardous goods of Category I, II, III, Coir waste, Coir fibre, and Caddies are not stored therein. (materials stored in Open)",
+    "Occupancy Code": 4012,
+    "Flexa Rate": 2.26,
+    "Code": "E"
+  },
+  {
+    "S NO": 284,
+    "Occupancy Description": "Storage of Category I hazardous goods subject to warranty that goods listed in category II, III, Coir waste, Coir fibre and Caddies are not stored therein. (Materials stored in open)",
+    "Occupancy Code": 4013,
+    "Flexa Rate": 2.51,
+    "Code": "E"
+  },
+  {
+    "S NO": 285,
+    "Occupancy Description": "Storage of hazardous goods listed in Category II subject to warranty that goods listed in Category III, Coir waste, Coir fibre and Caddies are not stored therein. (Materials stored in open)",
+    "Occupancy Code": 4014,
+    "Flexa Rate": 4.61,
+    "Code": "E"
+  },
+  {
+    "S NO": 286,
+    "Occupancy Description": "Storage of hazardous goods listed in Category III subject to warranty that Coir waste, Coir fibre and Caddies are not stored therein. (Materials stored in Open)",
+    "Occupancy Code": 4015,
+    "Flexa Rate": 5.58,
+    "Code": "E"
+  },
+  {
+    "S NO": 287,
+    "Occupancy Description": "Transporter's Godowns and godowns of clearing and forwarding agents. (Materials stored in Open)",
+    "Occupancy Code": 4016,
+    "Flexa Rate": 0.92,
+    "Code": "E"
+  },
+  {
+    "S NO": 288,
+    "Occupancy Description": "Storage of Coir waste , Coir Fibre, Caddies (Materials stored in Open)",
+    "Occupancy Code": 4017,
+    "Flexa Rate": 9.88,
+    "Code": "E"
+  },
+  {
+    "S NO": 289,
+    "Occupancy Description": "Bus Terminus",
+    "Occupancy Code": 4018,
+    "Flexa Rate": 3.67,
+    "Code": "C"
+  },
+  {
+    "S NO": 290,
+    "Occupancy Description": "Vehicles stored in Open Including Tractors",
+    "Occupancy Code": 4019,
+    "Flexa Rate": 2.33,
+    "Code": "E"
+  },
+  {
+    "S NO": 291,
+    "Occupancy Description": "Silent Risk",
+    "Occupancy Code": 4900,
+    "Flexa Rate": 0.3,
+    "Code": "B"
+  }
+]

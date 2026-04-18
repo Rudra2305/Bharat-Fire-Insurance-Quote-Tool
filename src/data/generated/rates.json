@@ -1,0 +1,104 @@
+{
+  "EQ STFI and Terrorism Rate": [
+    {
+      "Risk category": "Dwelling other than Co-operative Hsg Society",
+      "STFI": 0.075,
+      "Code": "A",
+      "Terrorism": 0.08,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.05,
+      "EQ Zone II": 0.05,
+      " EQ Zone I": 0.05
+    },
+    {
+      "Risk category": "Non Industrial- Co-operative Hsg Society, Hotels Shops as per section III of erthwhile tariff",
+      "STFI": 0.22,
+      "Code": "B",
+      "Terrorism": 0.15,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.15,
+      " EQ Zone I": 0.25
+    },
+    {
+      "Risk category": "Industrial including utilities located outside manufacturing & tank farm/gas holders Section IV, V, VII of erstwhile tariff",
+      "STFI": 0.37,
+      "Code": "C",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Standalone Storage (outside manufacturing premises) Section VI of erstwhile tariff (IN GODOWN)",
+      "STFI": 0.52,
+      "Code": "D",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Standalone Storage (outside manufacturing premises) Section VI of erstwhile tariff (IN OPEN)",
+      "STFI": 2.25,
+      "Code": "E",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Road incl Bridge/Culverts/Viaducts/Tunnels. Assets like Tollways, road assets etc. associated with Operational Roads necessarily would attract the rate applicable to roads",
+      "STFI": 0.52,
+      "Code": "F",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Pipelines",
+      "STFI": 0.52,
+      "Code": "G",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Railway Tracks incl. metro Tracks",
+      "STFI": 0.52,
+      "Code": "H",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "T&D Lines",
+      "STFI": 0.52,
+      "Code": "I",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    },
+    {
+      "Risk category": "Cellular Network Policies",
+      "STFI": 0.52,
+      "Code": "J",
+      "Terrorism": 0.23,
+      "EQ Zone IV": 0.05,
+      "EQ Zone III": 0.1,
+      "EQ Zone II": 0.25,
+      " EQ Zone I": 0.5
+    }
+  ]
+}

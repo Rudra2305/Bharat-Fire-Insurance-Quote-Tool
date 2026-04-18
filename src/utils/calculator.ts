@@ -40,7 +40,7 @@ export interface QuoteResult {
 
 export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
   const { 
-    buildingSI, pmSI, furnitureSI, stocksSI, 
+    buildingSI, pmSI, furnitureSI, stocksSI, otherSI, 
     discount, includeTerrorism, occupancy, pincode,
     isRenewal, hasClaims, pastPremium, pastClaims
   } = inputs;

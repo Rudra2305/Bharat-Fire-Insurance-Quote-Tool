@@ -15,59 +15,50 @@ export interface Occupancy {
   flexaRate: number;
 }
 
-// Map Pincodes to a Record for O(1) lookup
+// Map Pincodes - Filtering out invalid entries
 export const pincodeMap: Record<string, PincodeData> = {};
 (pincodesRaw as any[]).forEach((p: any) => {
-  const code = String(p["Pincode"]);
-  pincodeMap[code] = {
-    pincode: code,
-    state: p["State"],
-    district: p["District"],
-    eqZone: p["Earthquake zone"]
-  };
+  if (p && p["Pincode"]) {
+    const code = String(p["Pincode"]);
+    pincodeMap[code] = {
+      pincode: code,
+      state: p["State"] || "Unknown",
+      district: p["District"] || "Unknown",
+      eqZone: Number(p["Earthquake zone"]) || 3
+    };
+  }
 });
 
-// Map Occupancies
-export const occupancies: Occupancy[] = (occupanciesRaw as any[]).map((o: any) => ({
-  name: o["Occupancy Description"],
-  categoryCode: o["Code"],
-  flexaRate: o["Flexa Rate"]
-}));
+// Map Occupancies - Ensuring Name and Code exist
+export const occupancies: Occupancy[] = (occupanciesRaw as any[])
+  .filter(o => o && o["Occupancy Description"])
+  .map((o: any) => ({
+    name: String(o["Occupancy Description"]),
+    categoryCode: String(o["Code"] || "A"),
+    flexaRate: Number(o["Flexa Rate"]) || 0
+  }));
 
 // Map Rates
-const rateList = ratesRaw["EQ STFI and Terrorism Rate"];
+const rateList = ratesRaw["EQ STFI and Terrorism Rate"] || [];
 
-// Manual override for Terrorism Rates as per latest tariff
 export const terrorismRates: Record<string, number> = {
-  A: 0.08,
-  B: 0.13,
-  C: 0.21,
-  D: 0.21,
-  E: 0.21,
-  F: 0.21,
-  G: 0.21,
-  H: 0.21,
-  I: 0.21,
-  J: 0.21,
+  A: 0.08, B: 0.13, C: 0.21, D: 0.21, E: 0.21, F: 0.21, G: 0.21, H: 0.21, I: 0.21, J: 0.21,
 };
 
-// Initialize rate objects
 export const stfiRates: Record<string, number> = {};
 export const eqRates: Record<string, Record<number, number>> = {};
 
 rateList.forEach((r: any) => {
   const code = r["Code"];
   if (code) {
-    stfiRates[code] = r["STFI"];
-    // Terrorism rates are now handled by the manual override above
+    stfiRates[code] = Number(r["STFI"]) || 0;
     eqRates[code] = {
-      1: r[" EQ Zone I"] || r["EQ Zone I"], // Handle potential leading space
-      2: r["EQ Zone II"],
-      3: r["EQ Zone III"],
-      4: r["EQ Zone IV"]
+      1: Number(r[" EQ Zone I"] || r["EQ Zone I"]) || 0,
+      2: Number(r["EQ Zone II"]) || 0,
+      3: Number(r["EQ Zone III"]) || 0,
+      4: Number(r["EQ Zone IV"]) || 0
     };
   }
 });
 
-// Default fallback for terrorism if not found per code
 export const DEFAULT_TERRORISM_RATE = 0.15;

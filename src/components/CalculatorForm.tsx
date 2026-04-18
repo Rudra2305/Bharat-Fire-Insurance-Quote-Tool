@@ -45,7 +45,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
 
   const filteredOccupancies = occupancyQuery.length > 1 
     ? occupancies.filter(occ => 
-        occ.name.toLowerCase().includes(occupancyQuery.toLowerCase())
+        occ.name && occ.name.toLowerCase().includes(occupancyQuery.toLowerCase())
       ).slice(0, 10)
     : [];
 

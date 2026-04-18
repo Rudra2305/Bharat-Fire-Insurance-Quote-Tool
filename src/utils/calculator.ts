@@ -4,11 +4,17 @@ import type { Occupancy, PincodeData } from '../data/dataManager';
 export interface QuoteInputs {
   buildingSI: number;
   pmSI: number;
+  furnitureSI: number; // New field
   stocksSI: number;
   discount: number;
   includeTerrorism: boolean;
   occupancy: Occupancy | null;
   pincode: PincodeData | null;
+  // Underwriting Fields
+  isRenewal: boolean;
+  hasClaims: boolean;
+  pastPremium: number;
+  pastClaims: number;
 }
 
 export interface QuoteResult {
@@ -26,15 +32,39 @@ export interface QuoteResult {
   netPremium: number;
   gst: number;
   totalPremium: number;
+  // Underwriting Result
+  claimRatio: number;
+  isBlocked: boolean;
 }
 
 export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
-  const { buildingSI, pmSI, stocksSI, discount, includeTerrorism, occupancy, pincode } = inputs;
+  const { 
+    buildingSI, pmSI, furnitureSI, stocksSI, 
+    discount, includeTerrorism, occupancy, pincode,
+    isRenewal, hasClaims, pastPremium, pastClaims
+  } = inputs;
 
   if (!occupancy || !pincode) return null;
 
-  const totalSI = buildingSI + pmSI + stocksSI;
+  const totalSI = buildingSI + pmSI + furnitureSI + stocksSI;
   if (totalSI <= 0) return null;
+
+  // Underwriting Gatekeeper: 70% Claim Ratio Rule
+  let claimRatio = 0;
+  let isBlocked = false;
+
+  if (isRenewal && hasClaims) {
+    if (pastPremium > 0) {
+      claimRatio = (pastClaims / pastPremium) * 100;
+      if (claimRatio > 70) {
+        isBlocked = true;
+      }
+    } else if (pastClaims > 0) {
+      // If claims exist but no premium recorded (edge case), block it
+      claimRatio = 100;
+      isBlocked = true;
+    }
+  }
 
   // Policy Classification
   let policyType = "Standard Fire & Special Perils";
@@ -84,5 +114,7 @@ export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
     netPremium,
     gst,
     totalPremium,
+    claimRatio,
+    isBlocked
   };
 }

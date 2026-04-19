@@ -74,20 +74,20 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
 
   return (
     <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-500">
-      {/* SUM INSURED DISPLAY (LARGE & PROMINENT) */}
-      <div className="bg-blue-600 rounded-[2rem] p-8 text-white shadow-xl shadow-blue-200 relative overflow-hidden">
+      {/* SUM INSURED DISPLAY (REFINED SIZE) */}
+      <div className="bg-blue-600 rounded-3xl p-6 text-white shadow-xl shadow-blue-200 relative overflow-hidden">
         <div className="relative z-10">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-60">Total Sum Insured (SI)</span>
-          <div className="text-4xl sm:text-5xl font-black mt-1 flex items-baseline gap-1">
-            <span className="text-2xl opacity-40 font-medium italic">₹</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Total Sum Insured (SI)</span>
+          <div className="text-2xl sm:text-3xl font-black mt-1 flex items-baseline gap-1">
+            <span className="text-lg opacity-40 font-medium italic">₹</span>
             {new Intl.NumberFormat('en-IN').format(result.totalSI)}
           </div>
-          <div className="mt-4 flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full w-fit backdrop-blur-sm border border-white/10">
-             <CheckCircle2 className="w-3.5 h-3.5 text-blue-200" />
-             <span className="text-[10px] font-black uppercase tracking-wider">{result.policyType}</span>
+          <div className="mt-3 flex items-center gap-2 px-2.5 py-1 bg-white/10 rounded-full w-fit backdrop-blur-sm border border-white/10">
+             <CheckCircle2 className="w-3 h-3 text-blue-200" />
+             <span className="text-[9px] font-black uppercase tracking-wider">{result.policyType}</span>
           </div>
         </div>
-        <ShieldCheck className="absolute -right-8 -bottom-8 w-48 h-48 opacity-10 rotate-12" />
+        <ShieldCheck className="absolute -right-6 -bottom-6 w-32 h-32 opacity-10 rotate-12" />
       </div>
 
       {/* Main Quote Card */}

@@ -41,44 +41,44 @@ function App() {
       </main>
 
       {/* Branded Footer */}
-      <footer className="mt-20 py-12 bg-white border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+      <footer className="mt-20 py-8 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <p className="text-slate-400 font-black uppercase tracking-widest text-[10px] mb-2">Creator & Insurance Advisor</p>
-            <h3 className="text-xl font-black text-slate-900 leading-none">Shiva Yadav</h3>
-            <p className="mt-2 text-slate-500 text-sm font-medium">Helping businesses find the right coverage at the right price.</p>
+            <p className="text-slate-400 font-black uppercase tracking-widest text-[9px] mb-1.5">Created By</p>
+            <h3 className="text-lg font-black text-slate-900 leading-none">Shiva Yadav</h3>
+            <p className="mt-1.5 text-slate-500 text-xs font-medium italic">Finding the right coverage at the right price.</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             <a 
               href="https://wa.me/918770365124" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs font-black border border-emerald-100 hover:bg-emerald-100 transition-colors"
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-[10px] font-black border border-emerald-100 hover:bg-emerald-100 transition-colors"
             >
-              <MessageSquare className="w-3.5 h-3.5" /> WHATSAPP
+              <MessageSquare className="w-3 h-3" /> WHATSAPP
             </a>
             <a 
-              href="https://www.linkedin.com/in/shiva-yadav-016429161/" 
+              href="https://www.linkedin.com/in/shiva-yadav-7618b516a" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black border border-blue-100 hover:bg-blue-100 transition-colors"
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 text-blue-700 rounded-full text-[10px] font-black border border-blue-100 hover:bg-blue-100 transition-colors"
             >
-              <Linkedin className="w-3.5 h-3.5" /> LINKEDIN
+              <Linkedin className="w-3 h-3" /> LINKEDIN
             </a>
             <a 
               href="https://github.com/Rudra2305/Bharat-Fire-Insurance-Quote-Tool" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-slate-50 text-slate-700 rounded-full text-xs font-black border border-slate-100 hover:bg-slate-100 transition-colors"
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-slate-50 text-slate-700 rounded-full text-[10px] font-black border border-slate-100 hover:bg-slate-100 transition-colors"
             >
-              <Github className="w-3.5 h-3.5" /> GITHUB
+              <Github className="w-3 h-3" /> GITHUB
             </a>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-50 flex justify-center">
-          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] flex items-center gap-2">
-            Made with <Heart className="w-3 h-3 text-red-400 fill-red-400" /> for the Indian Insurance Market
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-50 flex justify-center">
+          <p className="text-[9px] text-slate-400 font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+            Made with <Heart className="w-2.5 h-2.5 text-red-400 fill-red-400" /> for the Indian Insurance Market
           </p>
         </div>
       </footer>

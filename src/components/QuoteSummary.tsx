@@ -49,14 +49,14 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
 
             <div className="bg-slate-900 p-6 rounded-2xl space-y-4">
               <h4 className="text-white font-bold text-sm">Reach out to Shiva for further negotiation</h4>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                High-claim risks require manual auditing. Shiva can help prepare your "Loss Mitigation Report" to secure a manual quote from top insurers.
+              <p className="text-slate-400 text-xs leading-relaxed font-medium">
+                High-claim risks require manual technical auditing. Shiva can help prepare your "Loss Mitigation Report" to secure a manual quote from top insurers.
               </p>
               <div className="flex gap-3">
                 <a href="https://wa.me/918770365124" className="flex-1 flex items-center justify-center gap-2 py-2 bg-emerald-500 text-white text-[10px] font-black rounded-lg hover:bg-emerald-600 transition-colors uppercase">
                   <MessageSquare className="w-3 h-3" /> WhatsApp
                 </a>
-                <a href="https://www.linkedin.com/in/shiva-yadav-016429161/" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 text-white text-[10px] font-black rounded-lg hover:bg-blue-700 transition-colors uppercase">
+                <a href="https://www.linkedin.com/in/shiva-yadav-7618b516a" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 text-white text-[10px] font-black rounded-lg hover:bg-blue-700 transition-colors uppercase">
                   <Linkedin className="w-3 h-3" /> LinkedIn
                 </a>
               </div>
@@ -172,7 +172,7 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
            <a href="https://wa.me/918770365124" className="flex-1 flex items-center justify-center gap-2 py-2 bg-white text-blue-600 text-[10px] font-black rounded-xl hover:bg-blue-50 transition-colors uppercase">
               <MessageSquare className="w-3.5 h-3.5" /> WhatsApp
             </a>
-            <a href="https://www.linkedin.com/in/shiva-yadav-016429161/" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-500 text-white text-[10px] font-black rounded-xl hover:bg-blue-400 transition-colors uppercase border border-blue-400">
+            <a href="https://www.linkedin.com/in/shiva-yadav-7618b516a" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-500 text-white text-[10px] font-black rounded-xl hover:bg-blue-400 transition-colors uppercase border border-blue-400">
               <Linkedin className="w-3.5 h-3.5" /> Profile
             </a>
         </div>

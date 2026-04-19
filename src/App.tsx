@@ -1,23 +1,82 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback, Component, ErrorInfo, ReactNode } from 'react';
 import { Header } from './components/Header';
 import { CalculatorForm } from './components/CalculatorForm';
 import { QuoteSummary } from './components/QuoteSummary';
 import { calculateQuote } from './utils/calculator';
 import type { QuoteInputs, QuoteResult } from './utils/calculator';
-import { Linkedin, Github, MessageSquare, Heart } from 'lucide-react';
+import { Linkedin, Github, MessageSquare, Heart, AlertOctagon } from 'lucide-react';
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  public state: ErrorBoundaryState = {
+    hasError: false,
+    error: null
+  };
+
+  public static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Uncaught error:', error, errorInfo);
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+          <div className="bg-white p-8 rounded-3xl shadow-xl max-w-md w-full text-center space-y-4">
+            <div className="bg-red-100 p-4 rounded-full w-fit mx-auto text-red-600">
+              <AlertOctagon className="w-10 h-10" />
+            </div>
+            <h2 className="text-2xl font-black text-slate-900">Application Error</h2>
+            <p className="text-slate-500 text-sm font-medium">
+              A runtime error occurred. Please refresh the page.
+            </p>
+            <div className="bg-slate-50 p-4 rounded-xl text-left overflow-auto max-h-40">
+              <code className="text-[10px] text-red-500">{this.state.error?.message}</code>
+            </div>
+            <button 
+              onClick={() => window.location.reload()}
+              className="w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors"
+            >
+              Refresh App
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.children;
+  }
+}
 
 function App() {
   const [result, setResult] = useState<QuoteResult | null>(null);
 
   const handleUpdate = useCallback((inputs: QuoteInputs) => {
-    const newResult = calculateQuote(inputs);
-    setResult(newResult);
+    try {
+      const newResult = calculateQuote(inputs);
+      setResult(newResult);
+    } catch (error) {
+      console.error('Calculation failed:', error);
+    }
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-10">
-      <Header />
-      
+    <ErrorBoundary>
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900 pb-10">
+        <Header />
+...
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Inputs */}

@@ -45,6 +45,8 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
       const found = pincodeMap[val];
       if (found) {
         setInputs(prev => ({ ...prev, pincode: found }));
+      } else {
+        setInputs(prev => ({ ...prev, pincode: null }));
       }
     } else {
       setInputs(prev => ({ ...prev, pincode: null }));

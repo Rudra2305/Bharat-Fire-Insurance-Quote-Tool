@@ -17,7 +17,7 @@ export interface Occupancy {
 
 // Map Pincodes - Filtering out invalid entries
 export const pincodeMap: Record<string, PincodeData> = {};
-(pincodesRaw as any[]).forEach((p: any) => {
+((pincodesRaw as any) || []).forEach((p: any) => {
   if (p && p["Pincode"]) {
     const code = String(p["Pincode"]);
     pincodeMap[code] = {
@@ -30,8 +30,8 @@ export const pincodeMap: Record<string, PincodeData> = {};
 });
 
 // Map Occupancies - Ensuring Name and Code exist
-export const occupancies: Occupancy[] = (occupanciesRaw as any[])
-  .filter(o => o && o["Occupancy Description"])
+export const occupancies: Occupancy[] = ((occupanciesRaw as any) || [])
+  .filter((o: any) => o && o["Occupancy Description"])
   .map((o: any) => ({
     name: String(o["Occupancy Description"]),
     categoryCode: String(o["Code"] || "A"),
@@ -39,7 +39,7 @@ export const occupancies: Occupancy[] = (occupanciesRaw as any[])
   }));
 
 // Map Rates
-const rateList = ratesRaw["EQ STFI and Terrorism Rate"] || [];
+const rateList = (ratesRaw as any)?.["EQ STFI and Terrorism Rate"] || [];
 
 export const terrorismRates: Record<string, number> = {
   A: 0.08, B: 0.13, C: 0.21, D: 0.21, E: 0.21, F: 0.21, G: 0.21, H: 0.21, I: 0.21, J: 0.21,

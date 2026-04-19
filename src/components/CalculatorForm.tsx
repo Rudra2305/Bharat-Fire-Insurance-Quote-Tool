@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import type { QuoteInputs } from '../utils/calculator';
 import { pincodeMap, occupancies } from '../data/dataManager';
 import { optionalAddons } from '../data/perils';
-import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus, Check } from 'lucide-react';
+import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus, Check, ShieldCheck } from 'lucide-react';
 
 interface CalculatorFormProps {
   onUpdate: (inputs: QuoteInputs) => void;
@@ -29,6 +29,12 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
   const [pincodeQuery, setPincodeQuery] = useState('');
   const [occupancyQuery, setOccupancyQuery] = useState('');
 
+  // Calculate Live Claim Ratio
+  const currentClaimRatio = useMemo(() => {
+    if (!inputs.isRenewal || !inputs.hasClaims || inputs.pastPremium <= 0) return 0;
+    return (inputs.pastClaims / inputs.pastPremium) * 100;
+  }, [inputs.isRenewal, inputs.hasClaims, inputs.pastPremium, inputs.pastClaims]);
+
   useEffect(() => {
     onUpdate(inputs);
   }, [inputs, onUpdate]);
@@ -45,12 +51,12 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
     }
   };
 
-  const toggleAddon = (id: string) => {
+  const toggleTerrorism = () => {
     setInputs(prev => {
-      const isSelected = prev.selectedAddons.includes(id);
+      const isSelected = prev.selectedAddons.includes('terrorism');
       const updated = isSelected 
-        ? prev.selectedAddons.filter(a => a !== id)
-        : [...prev.selectedAddons, id];
+        ? prev.selectedAddons.filter(a => a !== 'terrorism')
+        : [...prev.selectedAddons, 'terrorism'];
       
       return { 
         ...prev, 
@@ -180,7 +186,6 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
         </h3>
         
         <div className="space-y-6">
-          {/* Policy Status */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200">
             <div>
               <p className="font-bold text-slate-800 text-sm">Policy Status</p>
@@ -202,7 +207,6 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
             </div>
           </div>
 
-          {/* Claims History */}
           {inputs.isRenewal && (
             <div className="space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200">
@@ -224,31 +228,48 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
               </div>
 
               {inputs.hasClaims && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-in zoom-in-95 duration-200">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-700">Total Premium Paid (Last 3 Years)</label>
-                    <input
-                      type="number"
-                      onChange={(e) => setInputs(prev => ({ ...prev, pastPremium: Number(e.target.value) }))}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all font-bold text-sm"
-                      placeholder="Enter amount"
-                    />
+                <div className="space-y-4 animate-in zoom-in-95 duration-200">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-bold text-slate-700">Total Premium Paid (Last 3 Years)</label>
+                      <input
+                        type="number"
+                        onChange={(e) => setInputs(prev => ({ ...prev, pastPremium: Number(e.target.value) }))}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all font-bold text-sm"
+                        placeholder="Enter amount"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-bold text-slate-700">Total Claim Amount Received (Last 3 Years)</label>
+                      <input
+                        type="number"
+                        onChange={(e) => setInputs(prev => ({ ...prev, pastClaims: Number(e.target.value) }))}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all font-bold text-sm"
+                        placeholder="Enter amount"
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-700">Total Claim Amount Received (Last 3 Years)</label>
-                    <input
-                      type="number"
-                      onChange={(e) => setInputs(prev => ({ ...prev, pastClaims: Number(e.target.value) }))}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all font-bold text-sm"
-                      placeholder="Enter amount"
-                    />
+                  
+                  {/* LIVE CLAIM RATIO DISPLAY */}
+                  <div className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${currentClaimRatio > 70 ? 'bg-red-50 border-red-100' : 'bg-emerald-50 border-emerald-100'}`}>
+                    <div className={`p-1.5 rounded-lg ${currentClaimRatio > 70 ? 'bg-red-100 text-red-600' : 'bg-emerald-100 text-emerald-600'}`}>
+                      <History className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Live Claim Ratio</span>
+                      <p className={`text-lg font-black leading-none ${currentClaimRatio > 70 ? 'text-red-700' : 'text-emerald-700'}`}>
+                        {currentClaimRatio.toFixed(2)}%
+                      </p>
+                    </div>
+                    {currentClaimRatio > 70 && (
+                      <span className="ml-auto text-[10px] font-black text-red-600 uppercase bg-red-100 px-2 py-1 rounded-md animate-pulse">Threshold Exceeded</span>
+                    )}
                   </div>
                 </div>
               )}
             </div>
           )}
 
-          {/* Discount Section */}
           <div className="pt-4 border-t border-slate-100">
             <div className="space-y-3">
               <div className="flex justify-between items-center">
@@ -267,41 +288,56 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
         </div>
       </div>
 
-      {/* STEP 4: Add-ons */}
+      {/* STEP 4: Simplified Add-ons */}
       <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
-        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-          <Plus className="w-4 h-4" /> 4. Optional Add-on Covers
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {optionalAddons.map((addon) => (
-            <button
-              key={addon.id}
-              onClick={() => toggleAddon(addon.id)}
-              className={`flex items-start gap-3 p-4 rounded-2xl border transition-all text-left group ${
-                inputs.selectedAddons.includes(addon.id)
-                  ? 'bg-blue-50 border-blue-200 ring-2 ring-blue-500/10'
-                  : 'bg-white border-slate-200 hover:border-slate-300'
-              }`}
-            >
-              <div className={`mt-1 shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${
-                inputs.selectedAddons.includes(addon.id)
-                  ? 'bg-blue-600 border-blue-600 text-white'
-                  : 'bg-slate-50 border-slate-300 group-hover:border-slate-400'
-              }`}>
-                {inputs.selectedAddons.includes(addon.id) && <Check className="w-3 h-3 stroke-[3]" />}
+        <div className="flex justify-between items-center">
+           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+            <Plus className="w-4 h-4" /> 4. Optional Cover
+          </h3>
+          <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-2 py-1 rounded-md uppercase tracking-wider">Terrorism Only</span>
+        </div>
+
+        {/* Terrorism Toggle (The only optional calculation cover) */}
+        <button
+          onClick={toggleTerrorism}
+          className={`w-full flex items-center justify-between p-5 rounded-2xl border-2 transition-all group ${
+            inputs.selectedAddons.includes('terrorism')
+              ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200'
+              : 'bg-white border-slate-100 text-slate-700 hover:border-slate-200'
+          }`}
+        >
+          <div className="flex items-center gap-4">
+            <div className={`p-2 rounded-xl transition-colors ${inputs.selectedAddons.includes('terrorism') ? 'bg-blue-500' : 'bg-slate-100 text-slate-400'}`}>
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div className="text-left">
+              <p className="font-black text-sm uppercase tracking-wider">Terrorism Cover</p>
+              <p className={`text-[10px] font-medium opacity-80 ${inputs.selectedAddons.includes('terrorism') ? 'text-blue-100' : 'text-slate-500'}`}>
+                Highly recommended for urban risk locations.
+              </p>
+            </div>
+          </div>
+          <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
+            inputs.selectedAddons.includes('terrorism') ? 'bg-white border-white' : 'border-slate-200'
+          }`}>
+            {inputs.selectedAddons.includes('terrorism') && <Check className="w-4 h-4 text-blue-600 stroke-[4]" />}
+          </div>
+        </button>
+
+        {/* Informational Standard Extensions List */}
+        <div className="mt-8 space-y-4">
+          <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-1">Standard Extensions (Included based on eligibility)</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {optionalAddons.filter(a => a.id !== 'terrorism').map((addon) => (
+              <div key={addon.id} className="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-start gap-3">
+                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
+                <div>
+                  <p className="text-[11px] font-bold text-slate-700 leading-tight">{addon.name}</p>
+                  <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{addon.description}</p>
+                </div>
               </div>
-              <div>
-                <p className={`text-sm font-bold leading-tight ${
-                  inputs.selectedAddons.includes(addon.id) ? 'text-blue-900' : 'text-slate-700'
-                }`}>
-                  {addon.name}
-                </p>
-                <p className="text-[10px] text-slate-500 mt-1 font-medium leading-relaxed italic">
-                  {addon.description}
-                </p>
-              </div>
-            </button>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

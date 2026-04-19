@@ -278,7 +278,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
               </div>
               <input
                 type="range"
-                min="0" max="100" step="5"
+                min="0" max="80" step="5"
                 value={inputs.discount}
                 onChange={(e) => setInputs(prev => ({ ...prev, discount: Number(e.target.value) }))}
                 className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-600"

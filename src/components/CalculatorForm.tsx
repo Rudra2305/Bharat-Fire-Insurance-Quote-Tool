@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import type { QuoteInputs } from '../utils/calculator';
 import { pincodeMap, occupancies } from '../data/dataManager';
 import { optionalAddons } from '../data/perils';
-import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus, Check, ShieldCheck } from 'lucide-react';
+import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus, Check, ShieldCheck, Info } from 'lucide-react';
 
 interface CalculatorFormProps {
   onUpdate: (inputs: QuoteInputs) => void;

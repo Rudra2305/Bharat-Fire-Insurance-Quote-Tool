@@ -76,10 +76,30 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
                 <input
                   type="text"
                   value={occupancyQuery}
-                  onChange={(e) => setOccupancyQuery(e.target.value)}
+                  onChange={(e) => {
+                    setOccupancyQuery(e.target.value);
+                    if (inputs.occupancy) setInputs(prev => ({ ...prev, occupancy: null }));
+                  }}
                   placeholder="e.g. Textile, Warehouse..."
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium"
                 />
+                {inputs.occupancy && (
+                  <div className="mt-2 flex items-center justify-between bg-blue-50 border border-blue-100 rounded-xl px-4 py-2 animate-in fade-in zoom-in-95 duration-200">
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">Selected Business</span>
+                      <span className="font-bold text-blue-900 text-sm leading-tight">{inputs.occupancy.name}</span>
+                    </div>
+                    <button 
+                      onClick={() => {
+                        setInputs(prev => ({ ...prev, occupancy: null }));
+                        setOccupancyQuery('');
+                      }}
+                      className="text-[10px] font-black text-blue-600 hover:text-blue-800 underline uppercase tracking-widest"
+                    >
+                      Change
+                    </button>
+                  </div>
+                )}
                 {occupancyQuery && !inputs.occupancy && (
                   <div className="absolute z-50 w-full mt-1 bg-white border border-slate-200 rounded-xl shadow-xl max-h-60 overflow-y-auto">
                     {filteredOccupancies.map(occ => (

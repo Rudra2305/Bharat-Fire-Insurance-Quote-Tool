@@ -6,7 +6,7 @@ export interface QuoteInputs {
   pmSI: number;
   furnitureSI: number;
   stocksSI: number;
-  otherSI: number; // New field for other assets
+  otherSI: number;
   discount: number;
   includeTerrorism: boolean;
   occupancy: Occupancy | null;
@@ -16,6 +16,8 @@ export interface QuoteInputs {
   hasClaims: boolean;
   pastPremium: number;
   pastClaims: number;
+  // New Add-ons
+  selectedAddons: string[]; 
 }
 
 export interface QuoteResult {
@@ -33,16 +35,17 @@ export interface QuoteResult {
   netPremium: number;
   gst: number;
   totalPremium: number;
-  // Underwriting Result
   claimRatio: number;
   isBlocked: boolean;
+  compulsoryDeductible: string; // New field
 }
 
 export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
   const { 
     buildingSI, pmSI, furnitureSI, stocksSI, otherSI, 
     discount, includeTerrorism, occupancy, pincode,
-    isRenewal, hasClaims, pastPremium, pastClaims
+    isRenewal, hasClaims, pastPremium, pastClaims,
+    selectedAddons
   } = inputs;
 
   if (!occupancy || !pincode) return null;
@@ -61,19 +64,33 @@ export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
         isBlocked = true;
       }
     } else if (pastClaims > 0) {
-      // If claims exist but no premium recorded (edge case), block it
       claimRatio = 100;
       isBlocked = true;
     }
   }
 
-  // Policy Classification
-  let policyType = "Standard Fire & Special Perils";
+  // Policy Classification & Deductible Logic
+  let policyType = "";
+  let compulsoryDeductible = "";
   const siInCr = totalSI / 10000000;
+
   if (siInCr <= 5) {
     policyType = "Bharat Sookshma Udyam Suraksha";
+    compulsoryDeductible = "₹5,000";
   } else if (siInCr <= 50) {
     policyType = "Bharat Laghu Udyam Suraksha";
+    compulsoryDeductible = "5% of claim (Min ₹10,000)";
+  } else {
+    policyType = "Standard Fire & Special Perils (SFSP)";
+    if (siInCr <= 100) {
+      compulsoryDeductible = "5% of claim (Min ₹25,000)";
+    } else if (siInCr <= 1500) {
+      compulsoryDeductible = "5% of claim (Min ₹5,00,000)";
+    } else if (siInCr <= 2500) {
+      compulsoryDeductible = "5% of claim (Min ₹25,00,000)";
+    } else {
+      compulsoryDeductible = "5% of claim (Min ₹50,00,000)";
+    }
   }
 
   const categoryCode = occupancy.categoryCode;
@@ -86,11 +103,13 @@ export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
 
   const stfiRate = stfiRates[categoryCode] || 0;
   const eqRate = eqRates[categoryCode]?.[eqZone] || 0;
-  const terrorismRate = includeTerrorism ? (terrorismRates[categoryCode] || DEFAULT_TERRORISM_RATE) : 0;
+  const terrorismRate = (includeTerrorism || selectedAddons.includes('terrorism')) 
+    ? (terrorismRates[categoryCode] || DEFAULT_TERRORISM_RATE) 
+    : 0;
 
   const netRate = netFlexaRate + stfiRate + eqRate + terrorismRate;
 
-  // Premiums (Rate is per 1000 SI)
+  // Premiums
   const flexaPremium = (totalSI * netFlexaRate) / 1000;
   const stfiPremium = (totalSI * stfiRate) / 1000;
   const eqPremium = (totalSI * eqRate) / 1000;
@@ -116,6 +135,7 @@ export function calculateQuote(inputs: QuoteInputs): QuoteResult | null {
     gst,
     totalPremium,
     claimRatio,
-    isBlocked
+    isBlocked,
+    compulsoryDeductible
   };
 }

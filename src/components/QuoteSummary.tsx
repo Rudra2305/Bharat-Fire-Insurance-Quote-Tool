@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { QuoteResult } from '../utils/calculator';
-import { Info, TrendingDown, ShieldPlus, AlertTriangle, FileText, CheckCircle2, MessageSquare, Linkedin } from 'lucide-react';
+import { standardPerils } from '../data/perils';
+import { 
+  Info, TrendingDown, ShieldPlus, AlertTriangle, FileText, CheckCircle2, 
+  MessageSquare, Linkedin, ChevronDown, ChevronUp, ShieldCheck 
+} from 'lucide-react';
 
 interface QuoteSummaryProps {
   result: QuoteResult | null;
 }
 
 export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
+  const [showPerils, setShowPerils] = useState(false);
+
   if (!result) {
     return (
       <div className="bg-slate-50 border-2 border-dashed border-slate-200 rounded-3xl p-12 flex flex-col items-center justify-center text-center h-full">
@@ -26,7 +32,6 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
       maximumFractionDigits: 0 
     }).format(val || 0);
 
-  // ADVISORY CARD FOR HIGH CLAIM RATIO (>70%)
   if (result.isBlocked) {
     return (
       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
@@ -61,23 +66,6 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
                 </a>
               </div>
             </div>
-
-            <div className="space-y-4 pt-4 border-t border-slate-100">
-              <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest">General Guidelines</h4>
-              <ul className="space-y-3">
-                {[
-                  "This risk requires a manual technical audit by a senior underwriter.",
-                  "Standard Bharat Sookshma/Laghu automated rates are not applicable."
-                ].map((step, i) => (
-                  <li key={i} className="flex gap-3 text-xs text-slate-700 font-semibold">
-                    <div className="bg-slate-100 p-1 rounded-md h-fit mt-0.5">
-                      <FileText className="w-3 h-3 text-slate-500" />
-                    </div>
-                    {step}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -94,8 +82,22 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
         <div>
           <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Underwriting Approved</span>
           <h3 className="text-lg font-bold text-emerald-900 leading-tight">{result.policyType}</h3>
-          <p className="text-xs text-emerald-700 mt-1 font-medium">Sum Insured: {formatCurrency(result.totalSI)}</p>
+          <p className="text-xs text-emerald-700 mt-1 font-medium italic underline underline-offset-2 decoration-emerald-200">Standard Industry Terms Applied</p>
         </div>
+      </div>
+
+      {/* COMPULSORY DEDUCTIBLE CARD */}
+      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 shadow-sm">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="bg-amber-100 p-1.5 rounded-md">
+             <ShieldCheck className="w-4 h-4 text-amber-700" />
+          </div>
+          <span className="text-[10px] font-black text-amber-800 uppercase tracking-widest">Compulsory Excess (Deductible)</span>
+        </div>
+        <p className="text-xl font-black text-amber-900">{result.compulsoryDeductible}</p>
+        <p className="text-[10px] text-amber-700 mt-2 font-bold uppercase tracking-tight italic">
+          *Standard Industry Practice for SI of {formatCurrency(result.totalSI)}
+        </p>
       </div>
 
       {/* Main Quote Card */}
@@ -162,6 +164,36 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
         </div>
       </div>
 
+      {/* WHAT IS COVERED? (EXPANDABLE) */}
+      <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
+        <button 
+          onClick={() => setShowPerils(!showPerils)}
+          className="w-full px-6 py-4 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors"
+        >
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-blue-600" />
+            <span className="text-sm font-black uppercase tracking-tight text-slate-800">What is Covered?</span>
+          </div>
+          {showPerils ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400" />}
+        </button>
+        
+        {showPerils && (
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4 animate-in slide-in-from-top-2 duration-300">
+            {standardPerils.map((peril) => (
+              <div key={peril.name} className="flex gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="bg-white p-2 rounded-lg h-fit shadow-sm">
+                  <peril.icon className="w-4 h-4 text-blue-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-black text-slate-900">{peril.name}</p>
+                  <p className="text-[10px] text-slate-500 font-medium leading-tight mt-0.5">{peril.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
       {/* Professional Call to Action */}
       <div className="bg-blue-600 rounded-3xl p-6 text-white shadow-xl shadow-blue-500/20 space-y-4">
         <h4 className="font-black text-sm uppercase tracking-wider italic underline decoration-blue-400 underline-offset-4">Optimize Your Quote</h4>
@@ -176,14 +208,6 @@ export const QuoteSummary: React.FC<QuoteSummaryProps> = ({ result }) => {
               <Linkedin className="w-3.5 h-3.5" /> Profile
             </a>
         </div>
-      </div>
-
-      {/* Negotiation Tip */}
-      <div className="bg-slate-100 rounded-2xl p-5 flex gap-4">
-        <TrendingDown className="w-5 h-5 text-slate-500 shrink-0 mt-1" />
-        <p className="text-slate-600 text-[10px] font-bold uppercase tracking-wide leading-relaxed">
-          Benchmark Insight: Claim Ratio is <span className="text-blue-600">{(result.claimRatio || 0).toFixed(1)}%</span>. These IIB figures are standard for negotiation with brokers.
-        </p>
       </div>
     </div>
   );

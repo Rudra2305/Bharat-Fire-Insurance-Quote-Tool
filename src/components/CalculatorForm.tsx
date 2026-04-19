@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import type { QuoteInputs } from '../utils/calculator';
 import { pincodeMap, occupancies } from '../data/dataManager';
-import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus } from 'lucide-react';
+import { optionalAddons } from '../data/perils';
+import { Search, MapPin, Building2, Factory, Package, Percent, ShieldAlert, Sofa, History, AlertCircle, Plus, Check } from 'lucide-react';
 
 interface CalculatorFormProps {
   onUpdate: (inputs: QuoteInputs) => void;
@@ -22,6 +23,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
     hasClaims: false,
     pastPremium: 0,
     pastClaims: 0,
+    selectedAddons: ['terrorism'],
   });
 
   const [pincodeQuery, setPincodeQuery] = useState('');
@@ -41,6 +43,21 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
     } else {
       setInputs(prev => ({ ...prev, pincode: null }));
     }
+  };
+
+  const toggleAddon = (id: string) => {
+    setInputs(prev => {
+      const isSelected = prev.selectedAddons.includes(id);
+      const updated = isSelected 
+        ? prev.selectedAddons.filter(a => a !== id)
+        : [...prev.selectedAddons, id];
+      
+      return { 
+        ...prev, 
+        selectedAddons: updated,
+        includeTerrorism: updated.includes('terrorism')
+      };
+    });
   };
 
   const filteredOccupancies = occupancyQuery.length > 1 
@@ -147,7 +164,7 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
               </label>
               <input
                 type="number"
-                onChange={(e) => setInputs(prev => ({ ...prev, [item.key]: Number(e.target.value) }))}
+                onChange={(e) => setInputs(prev => ({ ...prev, [item.key as any]: Number(e.target.value) }))}
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-bold text-sm"
                 placeholder="0"
               />
@@ -231,8 +248,8 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
             </div>
           )}
 
-          {/* Discount & Terrorism */}
-          <div className="pt-4 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Discount Section */}
+          <div className="pt-4 border-t border-slate-100">
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Market Discount (%)</label>
@@ -246,16 +263,45 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
                 className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
             </div>
-            <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
-               <span className="text-xs font-bold text-slate-700 uppercase">Terrorism Cover</span>
-               <button
-                  onClick={() => setInputs(prev => ({ ...prev, includeTerrorism: !prev.includeTerrorism }))}
-                  className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${inputs.includeTerrorism ? 'bg-red-500' : 'bg-slate-300'}`}
-                >
-                  <span className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${inputs.includeTerrorism ? 'translate-x-5' : 'translate-x-1'}`} />
-                </button>
-            </div>
           </div>
+        </div>
+      </div>
+
+      {/* STEP 4: Add-ons */}
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+          <Plus className="w-4 h-4" /> 4. Optional Add-on Covers
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {optionalAddons.map((addon) => (
+            <button
+              key={addon.id}
+              onClick={() => toggleAddon(addon.id)}
+              className={`flex items-start gap-3 p-4 rounded-2xl border transition-all text-left group ${
+                inputs.selectedAddons.includes(addon.id)
+                  ? 'bg-blue-50 border-blue-200 ring-2 ring-blue-500/10'
+                  : 'bg-white border-slate-200 hover:border-slate-300'
+              }`}
+            >
+              <div className={`mt-1 shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${
+                inputs.selectedAddons.includes(addon.id)
+                  ? 'bg-blue-600 border-blue-600 text-white'
+                  : 'bg-slate-50 border-slate-300 group-hover:border-slate-400'
+              }`}>
+                {inputs.selectedAddons.includes(addon.id) && <Check className="w-3 h-3 stroke-[3]" />}
+              </div>
+              <div>
+                <p className={`text-sm font-bold leading-tight ${
+                  inputs.selectedAddons.includes(addon.id) ? 'text-blue-900' : 'text-slate-700'
+                }`}>
+                  {addon.name}
+                </p>
+                <p className="text-[10px] text-slate-500 mt-1 font-medium leading-relaxed italic">
+                  {addon.description}
+                </p>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </div>

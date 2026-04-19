@@ -271,18 +271,27 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ onUpdate }) => {
           )}
 
           <div className="pt-4 border-t border-slate-100">
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Market Discount (%)</label>
-                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">{inputs.discount}%</span>
+                <span className="bg-blue-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">{inputs.discount}%</span>
               </div>
               <input
                 type="range"
-                min="0" max="80" step="5"
+                min="0" max="100" step="5"
                 value={inputs.discount}
                 onChange={(e) => setInputs(prev => ({ ...prev, discount: Number(e.target.value) }))}
                 className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
+              <div className="bg-blue-50/50 border border-blue-100 rounded-xl p-3 space-y-2">
+                <div className="flex items-center gap-2">
+                  <Info className="w-3.5 h-3.5 text-blue-600" />
+                  <span className="text-[10px] font-black text-blue-800 uppercase tracking-wider">Discount Remark</span>
+                </div>
+                <p className="text-[10px] text-slate-600 leading-relaxed font-medium">
+                  While market guidelines currently allow up to <strong className="text-blue-700">100% discount</strong> on Flexa rates, this provision is subject to change. This tool applies a standard <strong className="text-blue-700">80% cap</strong> for baseline estimates. The final quote will be provided only after a proper underwriting technical audit of the specific risk.
+                </p>
+              </div>
             </div>
           </div>
         </div>
